@@ -1,0 +1,80 @@
+Agenda:
+
+Lit review:
+ - Big question: How does previous work on discrimination relate to what we're working on?
+
+Pooya: 
+ - Mechanical turk and ad research: 
+    - both used specific software 
+     - flash to show users one of twenty scenarios randomly
+     - browser, mturk users asked users to open ads in their browser
+ - User perception of discrimination in online advertising
+    - super related 
+    - can use this one to model our mturk methodology
+    - look in this paper at the number of questions
+ - Android phone study
+    - checked from user history which ads displayed
+ - Big takeaway for Pooya: we can use longer survey 
+ - Demographic example: What do online behavioral advertising privacy disclosures communicate to users?
+    - See Page 6 Table 1
+ - scenario definition: whatever we want to show to users to collect data from them
+    - Should have ads that are very related, neutral, and unrelated. 
+    - Need to justify why we chose the pages and the ads. 
+    - Have control group that is just a benign webpage with ads. 
+
+Paige: 
+ - She feels Pooya's found papers are a little more related than what she found.
+ - Biggest disconnect:
+    - Personal relevance vs. contextual relevance
+        - contextual: whether or not the ad relates to the pages
+        - personal: whether or not the ad relates to the person 
+ - Good paper:
+    - Covers the state of online advertising, how the bids work 
+    - Name: Online Display Advertising Markets Literature Review and Future Direction 
+
+Ricky: 
+ - Acted as a second reader on some of the bib papers. 
+
+Zero-day User:
+ - Matt, how did this go? Describe briefly your recommendation. Can you add to the methodology 
+ by Wednesday p.m. for folks to review before Thursday?
+    - Found a bunch of good resources that only take using a button. We all know that cookies
+    are used to track us but there's another method called fingerprinting that takes info about your
+    browser and your computer to ID you. Firefox does offer some protection but if we want to take 
+    things to the next level, we can use tor. https://www.torproject.org/
+    - Pooya suggestion: stay ourselves and visit webpages to collect ads, then we can compare
+    - Take-away: After we confirm methodology with prof thursday, we will all collect ads over the 
+    weekend.
+    - Matt point: We should make sure our ads are from google and not place there by the owner
+    - Pooya: we need a control website to collect ads from
+    - Work to do: construct list of webpages we're going to visit. 
+        - 4chan does have ads and they do have a white power wall
+        - everyone look for pages this week and let's construct a list
+
+Methodology:
+ - Need to decide how to choose ads/pages
+ - Need to decide demographics of interest
+ - Both of the above decisions should be literature based. What did everyone read that relates
+ to these decisions?
+ - questions: 
+ - Ask general opinions of advertising to detect relationships with super negative/super positive
+ results.
+ - Will need to test the survey tool with people we know or whatever to gauge how well the Likert
+ questions are working. 
+
+Presentation
+ - Pretty simple assignment
+ - Need a timeline with tasks for everyone spelled out on it in the slide deck
+    - Make next Monday. 
+ - Slides are started, find link in your e-mail 
+
+Mechanical Turk:
+ - Matt: stoked on the html form 
+
+Meeting with professor:
+ - Go over our methodology
+ - How are we paying for mechanical turk? (credit card from department or reimbursement)
+ 
+
+
+
