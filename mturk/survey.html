@@ -1,11 +1,18 @@
 <!-- You must include this JavaScript file -->
 <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+<style>
+.marginauto {
+    margin: 10px auto 20px;
+    display: block;
+}
+</style>
+
 
 <!-- For the full list of available Crowd HTML Elements and their input/output documentation,
       please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
 
 <!-- You must include crowd-form so that your task submits answers to MTurk -->
-<crowd-form answer-format="flatten-objects">
+<crowd-form id="survey" answer-format="flatten-objects">
 
   <crowd-instructions link-text="View instructions" link-type="button">
     <short-summary>
@@ -14,7 +21,7 @@
   </crowd-instructions>
   
     <div>
-        <img id="ad" src=""/>    
+        <img class="marginauto" width="50%" id="ad" src=""/>    
     </div>
     
     <div>
@@ -45,24 +52,43 @@
     <p>What is your gender?</p>
     <select name="gender" id="gender-select" required>
         <option value="">--Please choose an option--</option>
-        <option value="Male">Dog</option>
-        <option value="Female">Cat</option>
-        <option value="Other">Hamster</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
     </select>
+  </div>
+  <br>
+  
+  <div>
+    <p>Are you hispanic or latino?</p>
+    <select name="gender" id="gender-select" required>
+        <option value="">--Please choose an option--</option>
+        <option value="Yes">Male</option>
+        <option value="No">Female</option>
+        <option value="Decline to self identify">Other</option>
+    </select>
+  </div>
+  
+  <br>
+  
+  <div id="hidden">
   </div>
 </crowd-form>
 
 <script type="text/javascript">
+	var surveyNode = document.getElementById("hidden")
     var rand = Math.floor((Math.random() * 2) + 1);
-    var x = document.createElement("INPUT");
-    x.setAttribute("name", "imageId")
+    var hiddeninput = document.createElement("INPUT");
+	
+    hiddeninput.setAttribute("name", "imageId")
     if (rand === 1) {
         document.getElementById("ad").src="https://i.redd.it/k089v2uvzuw31.jpg";
-        x.setAttribute("value", "1")
+        hiddeninput.setAttribute("value", "1")
     }
     else {
         document.getElementById("ad").src="https://i.redd.it/9u19lhy2zow31.png";
-        x.setAttribute("value", "2")
+        hiddeninput.setAttribute("value", "2")
     }
-    x.setAttribute("type", "hidden");
+    hiddeninput.setAttribute("type", "hidden");
+	surveyNode.appendChild(hiddeninput); 
 </script>
