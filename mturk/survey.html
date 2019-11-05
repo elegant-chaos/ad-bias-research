@@ -1,0 +1,68 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+<!-- You must include crowd-form so that your task submits answers to MTurk -->
+<crowd-form answer-format="flatten-objects">
+
+  <crowd-instructions link-text="View instructions" link-type="button">
+    <short-summary>
+      <p>Provide a brief instruction here</p>
+    </short-summary>
+  </crowd-instructions>
+  
+    <div>
+        <img id="ad" src=""/>    
+    </div>
+    
+    <div>
+    <p>
+        On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
+    </p>
+    <crowd-radio-group required name="relevancy">
+        
+        <crowd-radio-button name="1">1</crowd-radio-button>
+        <crowd-radio-button name="2">2</crowd-radio-button>
+        <crowd-radio-button name="3">3</crowd-radio-button>
+        <crowd-radio-button name="4">4</crowd-radio-button>
+        <crowd-radio-button name="5">5</crowd-radio-button>
+    </crowd-radio-group>
+  </div>
+
+  <div>
+    <p>What is the zip code of your primary residence?</p>
+    <crowd-input name="zipCode" placeholder="example: 02459" required></crowd-input>
+  </div>
+
+  <div>
+    <p>What is your age?</p>
+    <crowd-input max-length="3" auto-validate allowed-pattern="^[0-9]*$" name="age" required></crowd-input>
+  </div>
+  
+  <div>
+    <p>What is your gender?</p>
+    <select name="gender" id="gender-select" required>
+        <option value="">--Please choose an option--</option>
+        <option value="Male">Dog</option>
+        <option value="Female">Cat</option>
+        <option value="Other">Hamster</option>
+    </select>
+  </div>
+</crowd-form>
+
+<script type="text/javascript">
+    var rand = Math.floor((Math.random() * 2) + 1);
+    var x = document.createElement("INPUT");
+    x.setAttribute("name", "imageId")
+    if (rand === 1) {
+        document.getElementById("ad").src="https://i.redd.it/k089v2uvzuw31.jpg";
+        x.setAttribute("value", "1")
+    }
+    else {
+        document.getElementById("ad").src="https://i.redd.it/9u19lhy2zow31.png";
+        x.setAttribute("value", "2")
+    }
+    x.setAttribute("type", "hidden");
+</script>
