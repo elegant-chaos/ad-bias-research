@@ -87,7 +87,7 @@ Notes on the hypothesis:
 Think about showing people 5-10 pages, instead of just 1, to amortize
 the demographic questions. 
 
-Ad to Bib: "Inside the Turk: Understanding MTurk as a Participant Pool"
+Add to Bib: "Inside the Turk: Understanding MTurk as a Participant Pool"
 
 Over the weekend: 
    - Everyone should just skim through the annotated bib
