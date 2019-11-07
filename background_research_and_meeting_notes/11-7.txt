@@ -1,8 +1,16 @@
 Questions to Ask
 
 
--Paying for study
--Demographics -should we be asking about zip code?
+-Paying for study - 5 websites, 10 ads each, 50 combinations (1 ad per page)
+-We will show 5-10 ads to each user 
+-show ad that came from there, then other half of the time show a random ad 
+
+Want some controversial (3 political sites, 2 non controversial)
+
+Answer: 20% of pairing will be relevant - might want to control and show something relevant 50% of the time 
+-will want same size groups (want to think about even distributions)
+
+-Demographics -should we be asking about zip code? Or should we use state city?
 
 -Are we okay to focus on the political angle?
 
@@ -15,6 +23,17 @@ Can we get more information from what google has researched?
 -About ads - should we show context (like CNN.com)
 
 -Is there any other feedback from our presentation today?
+
+
+Quality of army raters? 
+AdSense/AdWords
+-Try to dig into articles  
+
+
+
+Chi conference - look through titles or abstracts using MTurk and see how they ask demographic for those studies 
+
+Can run pilot to see how 
 
 
 
