@@ -1,0 +1,118 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+<style>
+  .marginauto {
+    margin: 10px auto 20px;
+    display: block;
+  }
+</style>
+
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+<!-- You must include crowd-form so that your task submits answers to MTurk -->
+<crowd-form id="survey" answer-format="flatten-objects">
+
+  <crowd-instructions link-text="View instructions" link-type="button">
+    <short-summary>
+      <p>Provide a brief instruction here</p>
+    </short-summary>
+  </crowd-instructions>
+
+  <div>
+    <img class="marginauto" width="75%" id="ad1" src="${url_1}" />
+  </div>
+
+  <div>
+    <p>
+      On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
+      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
+    </p>
+    <crowd-radio-group required name="relevancy1">
+      <crowd-radio-button name="1">1</crowd-radio-button>
+      <crowd-radio-button name="2">2</crowd-radio-button>
+      <crowd-radio-button name="3">3</crowd-radio-button>
+      <crowd-radio-button name="4">4</crowd-radio-button>
+      <crowd-radio-button name="5">5</crowd-radio-button>
+    </crowd-radio-group>
+  </div>
+
+  <div>
+    <img class="marginauto" width="75%" id="ad2" src="${url_}" />
+  </div>
+
+  <div>
+    <p>
+      On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
+      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
+    </p>
+    <crowd-radio-group required name="relevancy2">
+      <crowd-radio-button name="1">1</crowd-radio-button>
+      <crowd-radio-button name="2">2</crowd-radio-button>
+      <crowd-radio-button name="3">3</crowd-radio-button>
+      <crowd-radio-button name="4">4</crowd-radio-button>
+      <crowd-radio-button name="5">5</crowd-radio-button>
+    </crowd-radio-group>
+  </div>
+
+  <div>
+    <img class="marginauto" width="75%" id="ad3" src="${url_3}" />
+  </div>
+
+  <div>
+    <p>
+      On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
+      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
+    </p>
+    <crowd-radio-group required name="relevancy3">
+      <crowd-radio-button name="1">1</crowd-radio-button>
+      <crowd-radio-button name="2">2</crowd-radio-button>
+      <crowd-radio-button name="3">3</crowd-radio-button>
+      <crowd-radio-button name="4">4</crowd-radio-button>
+      <crowd-radio-button name="5">5</crowd-radio-button>
+    </crowd-radio-group>
+  </div>
+
+  <div>
+    <p>What is the zip code of your primary residence?</p>
+    <crowd-input name="zipCode" placeholder="example: 02459" required></crowd-input>
+  </div>
+
+  <div>
+    <p>What is your age?</p>
+    <select name="age" id="age-select" required>
+      <option value="">--Please choose an option--</option>
+      <option value="18-24">18-24</option>
+      <option value="25-34">25-34</option>
+      <option value="35-44">35-44</option>
+      <option value="45-54">45-54</option>
+      <option value="55-64">55-64</option>
+      <option value="65+">65+</option>
+    </select>
+  </div>
+  <br>
+
+  <div>
+    <p>What is your gender?</p>
+    <select name="gender" id="gender-select" required>
+      <option value="">--Please choose an option--</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+  <br>
+
+  <div>
+    <p>Are you hispanic or latino?</p>
+    <select name="gender" id="gender-select" required>
+      <option value="">--Please choose an option--</option>
+      <option value="Yes">Male</option>
+      <option value="No">Female</option>
+      <option value="Decline to self identify">Other</option>
+    </select>
+  </div>
+
+  <br>
+</crowd-form>
