@@ -1,39 +1,43 @@
-Questions to Ask
+
+Learning more about research that google has done:
+
+-Professor does not have any additional insight into the specifics of google ad studies, other than what he has already shared.
+-He said it is okay to use articles found online (like the one mentioned in our presentation). It is okay if they are not academic papers. He said to specifically search about AdWords/AdSense (these are the google ad products). 
+-From looking into AdWords, I am wondering if previous studies done by google have focused on matching a keyword to an ad or a search term to an ad (where participants are not shown a webpage). I asked about this and he said it is okay if our angle is slightly different than previous research.
 
 
--Paying for study - 5 websites, 10 ads each, 50 combinations (1 ad per page)
--We will show 5-10 ads to each user 
--show ad that came from there, then other half of the time show a random ad 
+Breakdown of our angle:
 
-Want some controversial (3 political sites, 2 non controversial)
+-Professor is supportive of us using sources from the political right and left. 
+-We want to use 5 webpages. 3 will be political and 2 will be non-controversial (like shoes or clothing ads).
+-He is supportive of us showing website info with our webpage articles (ex. including CNN banner). His thought is that it is more similar to an actual user experience on a web page.
 
-Answer: 20% of pairing will be relevant - might want to control and show something relevant 50% of the time 
--will want same size groups (want to think about even distributions)
+Pairings:
 
--Demographics -should we be asking about zip code? Or should we use state city?
+-Professor mentioned that we want to make sure enough of the ad/page combinations we would deem to be relevant, as in ads that actually came from a given webpage, rather than ads from other pages. 
+-We discussed having 5 webpages and collecting 5 ads for each page (this is down from the 10 ads we previously discussed). If there are too many ads that are unrelated to a page, it is likely that users will not see enough relevant pairings.
+-He mentioned that we might want to further control our study so that a user sees a relevant pairing closer to 50% of the time.
 
--Are we okay to focus on the political angle?
+Payment for study:
 
-
-Can we get more information from what google has researched?
--are they focusing on contextual or personal relevance?
--are they looking at search ads or display ads (embedded in page)
--should we consider effect of keyword matching?
-
--About ads - should we show context (like CNN.com)
-
--Is there any other feedback from our presentation today?
+-Professor sent an email to a colleague to find out how this payment has been handled in the past. He said he will get back to us.
 
 
-Quality of army raters? 
-AdSense/AdWords
--Try to dig into articles  
+Asking demographic questions about zip code or city/state:
+
+-Professor did not have a strong feeling either way. He suggested we review literature from other Mechanical Turk studies and follow what has previously been done.
+-He specifically mentioned looking at studies from Chi Conference. 
 
 
 
-Chi conference - look through titles or abstracts using MTurk and see how they ask demographic for those studies 
 
-Can run pilot to see how 
+
+
+
+
+
+
+
 
 
 
