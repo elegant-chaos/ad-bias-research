@@ -19,6 +19,7 @@ Demographic questions
         -> zip code not recommended by professor, bc it is kind of a privacy invasion
         -> this is something to be researched 
             -> how does this work with MTurk?
+        ANSWER: I think we should ask zip code. It's the most granular we're going to get with what we've got.
     -> Likert Scale of political affiliation
         -> Makes folks more likely to report when they voted for trump, voted right
     -> race 2-part: 
@@ -27,6 +28,7 @@ Demographic questions
     -> Jenn dig into this issue: 
         -> Feelings about ads 
         -> How should we ask this question? Likert scale?
+        -> ANSWER: Yes, Likert scale: "How do you feel about advertisements on webpages in general?" (Strongly dislike, dislike, neutral, like, strongly like)
 
 Software to run mturk study
     -> In python, specify duration of study, compensation
