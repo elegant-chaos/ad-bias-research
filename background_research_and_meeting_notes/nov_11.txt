@@ -1,0 +1,53 @@
+Power analysis
+    -> 30 samples per group (combo of all the relevant features per ad-to-page pairing)
+
+Ad/Page matches
+    -> Finalized images will be finished early Wednesday 
+    -> Paige and Ricky to meet after class on Tuesday to shore up the work 
+    -> Hard to match political pages with political ads
+    -> 6 pages each paired with 2 ads each: 2 liberal, 2 conservative, 2 non-political pages each paired with a political and a not political ad
+        -> 3 political ads and 3 neutral ads (we need 12 ads)
+        -> sees liberal page with relevant (all political ads are relevant to political pages) and not relevant, etc. 
+    -> All images need to be the same size when delivered
+    -> naming convention: websiteName-adName.png (MTurk people can see this name)
+        -> excel file that organizes these by right,left,neutral and relevant/not-relevant 
+    
+Demographic questions
+ -> Jenn will have this work done EOD Wednesday
+    -> gender, occupation, education, internet usage?
+    -> Jenn dig into this issue this week
+        -> zip code not recommended by professor, bc it is kind of a privacy invasion
+        -> this is something to be researched 
+            -> how does this work with MTurk?
+    -> Likert Scale of political affiliation
+        -> Makes folks more likely to report when they voted for trump, voted right
+    -> race 2-part: 
+        -> ethnicity/race
+        -> are you of hispanic origin?
+    -> Jenn dig into this issue: 
+        -> Feelings about ads 
+        -> How should we ask this question? Likert scale?
+
+Software to run mturk study
+    -> In python, specify duration of study, compensation
+    -> Data returned in json file 
+        -> someone can work on parsing the json file now
+    -> Need credentials for production amazon turk that has money in it
+    -> Pilot study:
+        -> various groups see the images in different orders
+        -> have amazon collect set number of responses for each group
+        -> See how long does it take to get the different responses for a small count per group initially
+            -> gives us a chance to adjust for compensation
+
+Questionnaire
+    -> finish the Questionnaire
+        -> test it with a few people that aren't us to see how long it takes
+    -> Matt and Pooya will have sample MTurk questionnaire ready to go on Friday morning (10 a.m.)
+        -> We will all need MTurk accounts to let people test on 
+        -> Set the survey so the same account can do it multiple times 
+
+Timeline for study launch
+    -> Need to tell the professor how many responses we want and ask him for the money via e-mail
+        -> primary question to base on our numbers on (region?)
+
+
