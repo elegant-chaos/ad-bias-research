@@ -6,6 +6,64 @@
     display: block;
     text-align: center;
   }
+
+  h1.likert-header {
+    padding-left: 4.25%;
+    padding-right: 4.25%;
+    margin: 20px 0 0;
+  }
+
+  form .statement {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 30px 4.25% 0 4.25%;
+    margin-bottom: 10px;
+  }
+
+  form .likert {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 35px;
+    display: block;
+    border-bottom: 2px solid #efefef;
+  }
+
+  form .likert:last-of-type {
+    border-bottom: 0;
+  }
+
+  form .likert:before {
+    content: '';
+    position: relative;
+    top: 11px;
+    left: 9.5%;
+    display: block;
+    background-color: #efefef;
+    height: 4px;
+    width: 78%;
+  }
+
+  form .likert li {
+    display: inline-block;
+    width: 19%;
+    text-align: center;
+    vertical-align: top;
+  }
+
+  form .likert li input[type=radio] {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -6px;
+
+  }
+
+  form .likert li label {
+    width: 100%;
+  }
 </style>
 
 
@@ -22,249 +80,429 @@
   </crowd-instructions>
 
   <div>
-    <img class="marginauto" width="50%" id="ad1" src="${url_1}" />
+    <img class="marginauto" width="40%" id="ad1" src="${url_1}" />
   </div>
 
   <div>
-    <p>
-      On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
-      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
-    </p>
-    <crowd-radio-group required name="relevancy1">
-      <crowd-radio-button name="q11" value="1">1</crowd-radio-button>
-      <crowd-radio-button name="q12" value="2">2</crowd-radio-button>
-      <crowd-radio-button name="q13" value="3">3</crowd-radio-button>
-      <crowd-radio-button name="q14" value="4">4</crowd-radio-button>
-      <crowd-radio-button name="q15" value="5">5</crowd-radio-button>
-    </crowd-radio-group>
+    <label class="statement">The above ad highlighted in red is relevant to the page</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="q1" value="strong_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q1" value="disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q1" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="q1" value="agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="q1" value="strong_agree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
   </div>
 
   <div>
-    <img class="marginauto" width="50%" id="ad2" src="${url_2}" />
+    <img class="marginauto" width="40%" id="ad2" src="${url_2}" />
   </div>
 
   <div>
-    <p>
-      On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
-      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
-    </p>
-    <crowd-radio-group class="marginauto" required name="relevancy2">
-      <crowd-radio-button name="q21" value="1">1</crowd-radio-button>
-      <crowd-radio-button name="q22" value="2">2</crowd-radio-button>
-      <crowd-radio-button name="q23" value="3">3</crowd-radio-button>
-      <crowd-radio-button name="q24" value="4">4</crowd-radio-button>
-      <crowd-radio-button name="q25" value="5">5</crowd-radio-button>
-    </crowd-radio-group>
+    <label class="statement">On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly
+      related”, how well does the
+      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="q2" value="strong_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q2" value="disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q2" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="q2" value="agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="q2" value="strong_agree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
   </div>
 
   <div>
-    <img class="marginauto" width="50%" id="ad3" src="${url_3}" />
+    <img class="marginauto" width="40%" id="ad3" src="${url_3}" />
   </div>
 
   <div>
-    <p>
-      On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
-      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
-    </p>
-    <crowd-radio-group required name="relevancy3">
-      <crowd-radio-button name="q31" value="1">1</crowd-radio-button>
-      <crowd-radio-button name="q32" value="2">2</crowd-radio-button>
-      <crowd-radio-button name="q33" value="3">3</crowd-radio-button>
-      <crowd-radio-button name="q34" value="4">4</crowd-radio-button>
-      <crowd-radio-button name="q35" value="5">5</crowd-radio-button>
-    </crowd-radio-group>
+    <label class="statement">On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly
+      related”, how well does the
+      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="q3" value="strong_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q3" value="disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q3" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="q3" value="agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="q3" value="strong_agree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
   </div>
 
   <div>
-    <img class="marginauto" width="50%" id="ad4" src="${url_4}" />
+    <img class="marginauto" width="40%" id="ad4" src="${url_4}" />
   </div>
 
   <div>
-    <p>
-      On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
-      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
-    </p>
-    <crowd-radio-group required name="relevancy4">
-      <crowd-radio-button name="q41" value="1">1</crowd-radio-button>
-      <crowd-radio-button name="q42" value="2">2</crowd-radio-button>
-      <crowd-radio-button name="q43" value="3">3</crowd-radio-button>
-      <crowd-radio-button name="q44" value="4">4</crowd-radio-button>
-      <crowd-radio-button name="q45" value="5">5</crowd-radio-button>
-    </crowd-radio-group>
+    <label class="statement">On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly
+      related”, how well does the
+      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="q4" value="strong_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q4" value="disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q4" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="q4" value="agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="q4" value="strong_agree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
   </div>
 
   <div>
-    <img class="marginauto" width="50%" id="ad5" src="${url_5}" />
+    <img class="marginauto" width="40%" id="ad5" src="${url_5}" />
   </div>
 
   <div>
-    <p>
-      On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
-      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
-    </p>
-    <crowd-radio-group required name="relevancy5">
-      <crowd-radio-button name="q51" value="1">1</crowd-radio-button>
-      <crowd-radio-button name="q52" value="2">2</crowd-radio-button>
-      <crowd-radio-button name="q53" value="3">3</crowd-radio-button>
-      <crowd-radio-button name="q54" value="4">4</crowd-radio-button>
-      <crowd-radio-button name="q55" value="5">5</crowd-radio-button>
-    </crowd-radio-group>
+    <label class="statement">On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly
+      related”, how well does the
+      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="q5" value="strong_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q5" value="disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q5" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="q5" value="agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="q5" value="strong_agree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
   </div>
 
   <div>
-    <img class="marginauto" width="50%" id="ad6" src="${url_6}" />
+    <img class="marginauto" width="40%" id="ad6" src="${url_6}" />
   </div>
 
   <div>
-    <p>
-      On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
-      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
-    </p>
-    <crowd-radio-group required name="relevancy6">
-      <crowd-radio-button name="q61" value="1">1</crowd-radio-button>
-      <crowd-radio-button name="q62" value="2">2</crowd-radio-button>
-      <crowd-radio-button name="q63" value="3">3</crowd-radio-button>
-      <crowd-radio-button name="q64" value="4">4</crowd-radio-button>
-      <crowd-radio-button name="q65" value="5">5</crowd-radio-button>
-    </crowd-radio-group>
+    <label class="statement">On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly
+      related”, how well does the
+      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="q6" value="strong_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q6" value="disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q6" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="q6" value="agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="q6" value="strong_agree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
   </div>
 
   <div>
-    <img class="marginauto" width="50%" id="ad7" src="${url_7}" />
+    <img class="marginauto" width="40%" id="ad7" src="${url_7}" />
   </div>
 
   <div>
-    <p>
-      On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
-      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
-    </p>
-    <crowd-radio-group required name="relevancy7">
-      <crowd-radio-button name="q71" value="1">1</crowd-radio-button>
-      <crowd-radio-button name="q72" value="2">2</crowd-radio-button>
-      <crowd-radio-button name="q73" value="3">3</crowd-radio-button>
-      <crowd-radio-button name="q74" value="4">4</crowd-radio-button>
-      <crowd-radio-button name="q75" value="5">5</crowd-radio-button>
-    </crowd-radio-group>
+    <label class="statement">On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly
+      related”, how well does the
+      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="q7" value="strong_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q7" value="disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q7" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="q7" value="agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="q7" value="strong_agree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
   </div>
 
   <div>
-    <img class="marginauto" width="50%" id="ad8" src="${url_8}" />
+    <img class="marginauto" width="40%" id="ad8" src="${url_8}" />
   </div>
 
   <div>
-    <p>
-      On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
-      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
-    </p>
-    <crowd-radio-group required name="relevancy8">
-      <crowd-radio-button name="q81" value="1">1</crowd-radio-button>
-      <crowd-radio-button name="q82" value="2">2</crowd-radio-button>
-      <crowd-radio-button name="q83" value="3">3</crowd-radio-button>
-      <crowd-radio-button name="q84" value="4">4</crowd-radio-button>
-      <crowd-radio-button name="q85" value="5">5</crowd-radio-button>
-    </crowd-radio-group>
+    <label class="statement">On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly
+      related”, how well does the
+      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="q8" value="strong_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q8" value="disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q8" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="q8" value="agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="q8" value="strong_agree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
   </div>
 
   <div>
-    <img class="marginauto" width="50%" id="ad9" src="${url_9}" />
+    <img class="marginauto" width="40%" id="ad9" src="${url_9}" />
   </div>
 
   <div>
-    <p>
-      On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
-      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
-    </p>
-    <crowd-radio-group required name="relevancy9">
-      <crowd-radio-button name="q91" value="1">1</crowd-radio-button>
-      <crowd-radio-button name="q92" value="2">2</crowd-radio-button>
-      <crowd-radio-button name="q93" value="3">3</crowd-radio-button>
-      <crowd-radio-button name="q94" value="4">4</crowd-radio-button>
-      <crowd-radio-button name="q95" value="5">5</crowd-radio-button>
-    </crowd-radio-group>
+    <label class="statement">On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly
+      related”, how well does the
+      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="q9" value="strong_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q9" value="disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q9" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li></li>
+      <input type="radio" name="q9" value="agree">
+      <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="q9" value="strong_agree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <img class="marginauto" width="40%" id="ad10" src="${url_10}" />
   </div>
 
   <div>
-    <img class="marginauto" width="50%" id="ad10" src="${url_10}" />
+    <label class="statement">On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly
+      related”, how well does the
+      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="q10" value="strong_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q10" value="disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q10" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="q10" value="agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="q10" value="strong_agree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
   </div>
 
   <div>
-    <p>
-      On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
-      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
-    </p>
-    <crowd-radio-group required name="relevancy10">
-      <crowd-radio-button name="q101" value="1">1</crowd-radio-button>
-      <crowd-radio-button name="q102" value="2">2</crowd-radio-button>
-      <crowd-radio-button name="q103" value="3">3</crowd-radio-button>
-      <crowd-radio-button name="q104" value="4">4</crowd-radio-button>
-      <crowd-radio-button name="q105" value="5">5</crowd-radio-button>
-    </crowd-radio-group>
+    <img class="marginauto" width="40%" id="ad11" src="${url_11}" />
   </div>
 
   <div>
-    <img class="marginauto" width="50%" id="ad11" src="${url_11}" />
+    <label class="statement">On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly
+      related”, how well does the
+      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="q11" value="strong_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q11" value="disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q11" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="q11" value="agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="q11" value="strong_agree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
   </div>
 
   <div>
-    <p>
-      On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
-      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
-    </p>
-    <crowd-radio-group required name="relevancy11">
-      <crowd-radio-button name="q111" value="1">1</crowd-radio-button>
-      <crowd-radio-button name="q112" value="2">2</crowd-radio-button>
-      <crowd-radio-button name="q113" value="3">3</crowd-radio-button>
-      <crowd-radio-button name="q114" value="4">4</crowd-radio-button>
-      <crowd-radio-button name="q115" value="5">5</crowd-radio-button>
-    </crowd-radio-group>
+    <img class="marginauto" width="40%" id="ad12" src="${url_12}" />
   </div>
 
   <div>
-    <img class="marginauto" width="50%" id="ad12" src="${url_12}" />
-  </div>
-
-  <div>
-    <p>
-      On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
-      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
-    </p>
-    <crowd-radio-group required name="relevancy12">
-      <crowd-radio-button name="q121" value="1">1</crowd-radio-button>
-      <crowd-radio-button name="q122" value="2">2</crowd-radio-button>
-      <crowd-radio-button name="q123" value="3">3</crowd-radio-button>
-      <crowd-radio-button name="q124" value="4">4</crowd-radio-button>
-      <crowd-radio-button name="q125" value="5">5</crowd-radio-button>
-    </crowd-radio-group>
+    <label class="statement">On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly
+      related”, how well does the
+      advertisement for “Black and Blue” (outlined in red) match the content of the webpage?</label>
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="q12" value="strong_disagree">
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q12" value="disagree">
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="q12" value="neutral">
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="q12" value="agree">
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="q12" value="strong_agree">
+        <label>Strongly agree</label>
+      </li>
+    </ul>
   </div>
 
   <div style="width: 90%; margin:auto; display:block;">
-    <hr>  
+    <hr>
   </div>
 
   <div>
     <p>Please answer the following demographic questions.</p>
   </div>
-  
-  <div>
-    <p>
-      On a scale from 1 to 5, where 1 means "strongly dislike" and 5 means "strongly like", how do you feel about advertisements on webpages in general?
-    </p>
-    <crowd-radio-group required name="survey_enjoyment">
-      <crowd-radio-button name="s1" value="1">1</crowd-radio-button>
-      <crowd-radio-button name="s2" value="2">2</crowd-radio-button>
-      <crowd-radio-button name="s3" value="3">3</crowd-radio-button>
-      <crowd-radio-button name="s4" value="4">4</crowd-radio-button>
-      <crowd-radio-button name="s5" value="5">5</crowd-radio-button>
-    </crowd-radio-group>
+
+  <label class="statement">On a scale from 1 to 5, where 1 means "strongly dislike" and 5 means "strongly like", how do
+    you feel about
+    advertisements on webpages in general?</label>
+  <ul class='likert'>
+    <li>
+      <input type="radio" name="d1" value="strong_disagree">
+      <label>Strongly disagree</label>
+    </li>
+    <li>
+      <input type="radio" name="d1" value="disagree">
+      <label>Disagree</label>
+    </li>
+    <li>
+      <input type="radio" name="d1" value="neutral">
+      <label>Neutral</label>
+    </li>
+    <li>
+      <input type="radio" name="d1" value="agree">
+      <label>Agree</label>
+    </li>
+    <li>
+      <input type="radio" name="d1" value="strong_agree">
+      <label>Strongly agree</label>
+    </li>
+  </ul>
   </div>
 
   <div style="width: 200px; margin:auto; display:block;">
     <p>What is the zip code of your primary residence?</p>
-    <crowd-input max-length="5" allowed-pattern="^[0-9]*$" name="zipCode" placeholder="example: 02459" required></crowd-input>
+    <crowd-input max-length="5" allowed-pattern="^[0-9]*$" name="zipCode" placeholder="example: 02459" required>
+    </crowd-input>
   </div>
 
   <div>
-    <p>What is your age?</p>
+    <p>Select your age group from the dropdown menu</p>
     <select name="age" id="age-select" required>
       <option value="">--Please choose an option--</option>
       <option value="18-24">18-24</option>
@@ -278,7 +516,7 @@
   <br>
 
   <div>
-    <p>What is your gender?</p>
+    <p>Select your gender from the dropdown menu</p>
     <select name="gender" id="gender-select" required>
       <option value="">--Please choose an option--</option>
       <option value="Male">Male</option>
@@ -289,7 +527,7 @@
   <br>
 
   <div>
-    <p>What is your occupation?</p>
+    <p>Select your occupation from the dropdown menu</p>
     <select name="occupation" id="occupation-select" required>
       <option value="">--Please choose an option--</option>
       <option value="employed_stem">Employed (Science, Engineering, or IT)</option>
@@ -305,7 +543,7 @@
   <br>
 
   <div>
-    <p>What is your highest level of education?</p>
+    <p>Select your highest level of education from the dropdown menu</p>
     <select name="education" id="education-select" required>
       <option value="">--Please choose an option--</option>
       <option value="some_highschool">Some Highschool</option>
@@ -317,9 +555,9 @@
     </select>
   </div>
   <br>
-  
+
   <div>
-    <p>What is your race/ethnicity?</p>
+    <p>Select your race/ethnicity from the dropdown menu</p>
     <select name="race" id="race-select" required>
       <option value="">--Please choose an option--</option>
       <option value="hispanic-latino">Hispanic or Latino</option>
@@ -338,7 +576,7 @@
     <select name="Hispanic" id="hispanic-select" required>
       <option value="">--Please choose an option--</option>
       <option value="Yes">Yes</option>
-      <option value="No No">No</option>
+      <option value="No">No</option>
       <option value="Decline to self identify">Other</option>
     </select>
   </div>
