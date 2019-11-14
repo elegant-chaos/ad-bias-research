@@ -1,0 +1,11 @@
+https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/mturk.html#MTurk.Client.list_worker_blocks
+
+Use the function list_worker_blocks to pull in all the IDs of MTurkers who
+have already completed any of our HITs and to block those wokers. 
+
+
+https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/mturk.html#MTurk.Client.create_qualification_type
+
+Use the function create_qualification_type to prevent workers from doing the same HIT twice.
+
+Also, should use create_qualification_type to prevent anyone from outside the U.S. from completing the survey.
