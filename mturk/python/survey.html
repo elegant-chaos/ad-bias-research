@@ -4,6 +4,7 @@
   .marginauto {
     margin: 10px auto 20px;
     display: block;
+    text-align: center;
   }
 </style>
 
@@ -21,7 +22,7 @@
   </crowd-instructions>
 
   <div>
-    <img class="marginauto" width="75%" id="ad1" src="${url_1}" />
+    <img class="marginauto" width="50%" id="ad1" src="${url_1}" />
   </div>
 
   <div>
@@ -39,7 +40,7 @@
   </div>
 
   <div>
-    <img class="marginauto" width="75%" id="ad2" src="${url_2}" />
+    <img class="marginauto" width="50%" id="ad2" src="${url_2}" />
   </div>
 
   <div>
@@ -47,7 +48,7 @@
       On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
       advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
     </p>
-    <crowd-radio-group required name="relevancy2">
+    <crowd-radio-group class="marginauto" required name="relevancy2">
       <crowd-radio-button name="q21" value="1">1</crowd-radio-button>
       <crowd-radio-button name="q22" value="2">2</crowd-radio-button>
       <crowd-radio-button name="q23" value="3">3</crowd-radio-button>
@@ -57,7 +58,7 @@
   </div>
 
   <div>
-    <img class="marginauto" width="75%" id="ad3" src="${url_3}" />
+    <img class="marginauto" width="50%" id="ad3" src="${url_3}" />
   </div>
 
   <div>
@@ -75,7 +76,7 @@
   </div>
 
   <div>
-    <img class="marginauto" width="75%" id="ad4" src="${url_4}" />
+    <img class="marginauto" width="50%" id="ad4" src="${url_4}" />
   </div>
 
   <div>
@@ -93,7 +94,7 @@
   </div>
 
   <div>
-    <img class="marginauto" width="75%" id="ad5" src="${url_5}" />
+    <img class="marginauto" width="50%" id="ad5" src="${url_5}" />
   </div>
 
   <div>
@@ -111,7 +112,7 @@
   </div>
 
   <div>
-    <img class="marginauto" width="75%" id="ad6" src="${url_6}" />
+    <img class="marginauto" width="50%" id="ad6" src="${url_6}" />
   </div>
 
   <div>
@@ -129,7 +130,7 @@
   </div>
 
   <div>
-    <img class="marginauto" width="75%" id="ad7" src="${url_7}" />
+    <img class="marginauto" width="50%" id="ad7" src="${url_7}" />
   </div>
 
   <div>
@@ -147,7 +148,7 @@
   </div>
 
   <div>
-    <img class="marginauto" width="75%" id="ad8" src="${url_8}" />
+    <img class="marginauto" width="50%" id="ad8" src="${url_8}" />
   </div>
 
   <div>
@@ -165,7 +166,7 @@
   </div>
 
   <div>
-    <img class="marginauto" width="75%" id="ad9" src="${url_9}" />
+    <img class="marginauto" width="50%" id="ad9" src="${url_9}" />
   </div>
 
   <div>
@@ -183,7 +184,7 @@
   </div>
 
   <div>
-    <img class="marginauto" width="75%" id="ad10" src="${url_10}" />
+    <img class="marginauto" width="50%" id="ad10" src="${url_10}" />
   </div>
 
   <div>
@@ -191,7 +192,7 @@
       On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
       advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
     </p>
-    <crowd-radio-group required name="relevancy6">
+    <crowd-radio-group required name="relevancy10">
       <crowd-radio-button name="q101" value="1">1</crowd-radio-button>
       <crowd-radio-button name="q102" value="2">2</crowd-radio-button>
       <crowd-radio-button name="q103" value="3">3</crowd-radio-button>
@@ -201,7 +202,7 @@
   </div>
 
   <div>
-    <img class="marginauto" width="75%" id="ad11" src="${url_11}" />
+    <img class="marginauto" width="50%" id="ad11" src="${url_11}" />
   </div>
 
   <div>
@@ -209,7 +210,7 @@
       On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
       advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
     </p>
-    <crowd-radio-group required name="relevancy6">
+    <crowd-radio-group required name="relevancy11">
       <crowd-radio-button name="q111" value="1">1</crowd-radio-button>
       <crowd-radio-button name="q112" value="2">2</crowd-radio-button>
       <crowd-radio-button name="q113" value="3">3</crowd-radio-button>
@@ -219,7 +220,7 @@
   </div>
 
   <div>
-    <img class="marginauto" width="75%" id="ad12" src="${url_12}" />
+    <img class="marginauto" width="50%" id="ad12" src="${url_12}" />
   </div>
 
   <div>
@@ -227,7 +228,7 @@
       On a scale from 1 to 5, where 1 means “completely unrelated” and 5 means “perfectly related”, how well does the
       advertisement for “Black and Blue” (outlined in red) match the content of the webpage?
     </p>
-    <crowd-radio-group required name="relevancy6">
+    <crowd-radio-group required name="relevancy12">
       <crowd-radio-button name="q121" value="1">1</crowd-radio-button>
       <crowd-radio-button name="q122" value="2">2</crowd-radio-button>
       <crowd-radio-button name="q123" value="3">3</crowd-radio-button>
@@ -236,14 +237,17 @@
     </crowd-radio-group>
   </div>
 
-  <hr>  
+  <div style="width: 90%; margin:auto; display:block;">
+    <hr>  
+  </div>
+
   <div>
     <p>Please answer the following demographic questions.</p>
   </div>
   
   <div>
     <p>
-      On a scale from 1 to 5, where 1 means “strongly dislike” and 5 means “strongly like”, how do you feel about advertisements on webpages in general?
+      On a scale from 1 to 5, where 1 means "strongly dislike" and 5 means "strongly like", how do you feel about advertisements on webpages in general?
     </p>
     <crowd-radio-group required name="survey_enjoyment">
       <crowd-radio-button name="s1" value="1">1</crowd-radio-button>
@@ -254,9 +258,9 @@
     </crowd-radio-group>
   </div>
 
-  <div>
+  <div style="width: 200px; margin:auto; display:block;">
     <p>What is the zip code of your primary residence?</p>
-    <crowd-input name="zipCode" placeholder="example: 02459" required></crowd-input>
+    <crowd-input max-length="5" name="zipCode" placeholder="example: 02459" required></crowd-input>
   </div>
 
   <div>
@@ -280,6 +284,36 @@
       <option value="Male">Male</option>
       <option value="Female">Female</option>
       <option value="Other">Other</option>
+    </select>
+  </div>
+  <br>
+
+  <div>
+    <p>What is your occupation?</p>
+    <select name="occupation" id="occupation-select" required>
+      <option value="">--Please choose an option--</option>
+      <option value="employed_stem">Employed (Science, Engineering, or IT)</option>
+      <option value="employed_biz">Employed (Business, Management, or Finances)</option>
+      <option value="employed_teacher">Employed (Teacher)</option>
+      <option value="employed_other">Employed (Other fields)</option>
+      <option value="student">Student</option>
+      <option value="unemployed">Unemployed</option>
+      <option value="decline">Decline to answer</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+  <br>
+
+  <div>
+    <p>What is your highest level of education?</p>
+    <select name="education" id="education-select" required>
+      <option value="">--Please choose an option--</option>
+      <option value="some_highschool">Some Highschool</option>
+      <option value="highschool">Highschool</option>
+      <option value="associates">Associates</option>
+      <option value="some_college">Some College</option>
+      <option value="bachelors">Bachelors</option>
+      <option value="grad">Graduate</option>
     </select>
   </div>
   <br>
