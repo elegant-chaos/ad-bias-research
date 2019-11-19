@@ -1,0 +1,30 @@
+Agenda:
+
+-> Jenn, update on how we're randomizing the surveys. Going to just do a bunch of 
+random groups to make it easier. 
+    -> Jenn probably done by tomorrow at 6 p.m. (include updating your survey code chunk)
+
+-> Pooya, how's getting ready to launch the survey going? Did you figure out how to set 
+the criteria that no-one can do more than one of our HITs?
+        -> Pooya still working on this, but is okay. 
+
+-> Other questions:
+    -> How is the data going to be formatted when it comes in from MTurk? Someone can
+    start working on a parsing script now.
+            -> Pooya will write the parsing script. Goal to move this into .csv
+    -> Other than completeness, how are we determining which HITs to reject? Do we need 
+    to do some more research on this?
+            -> We need a timer that notices too short of a time. 
+            -> Matt will do. 
+    -> Who has experience with machine learning? The professor said he doesn't think
+    fitting a model is a reach goal with a group of 5 people, so we need to figure out who can take
+    on some model building (and maybe assessing with some of the tools we learned about in our first
+    hw).
+            -> the features are the demographics and the prediction is the relevance rating from the users
+            -> unsupervised learning, cluster on ratings 
+            -> let's bring this up with the professor
+            -> Paige reading, Ricky reading  
+    -> We can also start on the poster now by doing basic formatting and writing an intro. 
+            -> recommendation: make in powerpoint 
+            -> Matt
+
