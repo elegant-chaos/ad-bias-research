@@ -1,0 +1,82 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+```
+
+
+Making ID column
+
+```{r, warning = FALSE}
+ads <- read_csv("ad_page_guide.csv")
+ads <- ads %>% mutate(Relevant = Relevantvs.NonRelevant) %>% select(-Relevantvs.NonRelevant)
+ads <- ads %>% mutate(page = str_split(Filename, "-"))  %>% mutate(r = map(page, ~ data.frame(t(.)))) %>%
+  unnest(r) %>%
+  select(-page) %>% mutate(page = X1) %>% select(-X1, -X2)
+ads <- ads %>% group_by(page, Relevant) %>% mutate(in_level_id = sequence(n()))
+pages <- ads %>% select(page, Relevant) %>% group_by(page, Relevant) %>% summarise(count = n()) %>% rowid_to_column("group_id") %>% 
+  select(-count)
+ads <- ads %>% left_join(pages, by = c("page", "Relevant")) %>% 
+  rowid_to_column("overall_id")
+```
+
+Sampling 
+
+```{r}
+
+make_group <- function(){
+  
+  len <- c(1:4)
+  return(in_level_id = sample(len,16, replace = TRUE))
+}
+
+groups <- mosaic::do(167)*make_group()
+
+colnames(groups) <- c(1:16)
+
+groups <- groups %>% gather(key = "group_id", value = "in_level_id")
+groups <- groups %>% group_by(group_id) %>% mutate(survey_number = sequence(n()))
+groups <- groups %>% ungroup() %>% mutate(group_id = as.numeric(group_id))
+```
+
+Making the final data frame
+
+```{r}
+# Reminder:  once this .csv is saved, open it up and insert spaces around the dashes
+
+final_csv <- data.frame(ad_name_1 = character(),
+                        ad_name_2 = character(),
+                        ad_name_3 = character(),
+                        ad_name_4 = character(),
+                        ad_name_5 = character(),
+                        ad_name_6 = character(),
+                        ad_name_7 = character(),
+                        ad_name_8 = character(),
+                        ad_name_9 = character(),
+                        ad_name_10 = character(),
+                        ad_name_11 = character(),
+                        ad_name_12 = character(),
+                        ad_name_13 = character(),
+                        ad_name_14 = character(),
+                        ad_name_15 = character(),
+                        ad_name_16 = character(),
+                        stringsAsFactors = FALSE)
+str(final_csv)
+
+for(i in 1:167) {
+  temp <- groups %>% filter(survey_number == i) %>% left_join(ads, by = c("group_id", "in_level_id")) %>% ungroup()
+  str(temp)
+  for(j in 1:16){
+    final_csv[i,j] = temp$Filename[j][1]
+    print(temp$Filename[j][1])
+  }
+}
+
+str(final_csv)
+write_csv(final_csv, "survey_groups.csv")
+
+```
+
