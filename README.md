@@ -5,8 +5,8 @@ Research into bias in Google Ads conducted for CS520 at Umass-Amherst
 
 Project Organization
 ------------
+```console
 
-   .
 ├── LICENSE
 ├── Makefile
 ├── README.md
@@ -64,7 +64,7 @@ Project Organization
 ├── test_environment.py
 └── tox.ini
 
-
+```
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
