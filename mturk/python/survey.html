@@ -7,18 +7,23 @@
     text-align: center;
   }
 
+  .marginauto img {
+    border: 3px solid black;
+  }
+
   .statement {
     display: block;
     font-size: 14px;
-    font-weight: bold;
     padding: 30px 4.25% 0 4.25%;
-    margin-bottom: 10px;
+    margin: 0 auto 10px;
+    /* margin-bottom: 10px; */
+    max-width: 50%
   }
 
   .likert {
     list-style: none;
-    width: 100%;
-    margin: 0;
+    width: 50%;
+    margin: auto;
     padding: 0 0 35px;
     display: block;
     border-bottom: 2px solid #efefef;
@@ -65,19 +70,21 @@
 
 <!-- You must include crowd-form so that your task submits answers to MTurk -->
 <crowd-form class="marginauto" id="survey" answer-format="flatten-objects">
+  <div class="marginauto" style="width: 80%">
+    <p>You will be shown screen shots of webpages that include an advertisement placed by a service like Google Ads. The advertisement on the page will be highlighted with a blue box. For each webpage/advertisement combination, you will rate how relevant the advertisement is to the page based on your subjective judgement. The Oxford English Dictionary defines "relevant" as "closely connected or appropriate to what is being done or considered." So, for each image, you will decide if the advertisement is closley connected or appropriate to the content of the webpage. There are a total of 16 images to rate.
+    <p>The task ends with a question asking for your opinion on advertisements in general, followed by several demographic questions.</p>
+  </div>
 
-  <crowd-instructions link-text="View instructions" link-type="button">
-    <short-summary>
-      <p> You will be shown screen shots of webpages that include an advertisement placed by a service like Google Ads. The advertisement on the page will be highlighted with a blue box. For each webpage/advertisement combination, you will rate how relevant the advertisement is to the page based on your subjective judgement. The Oxford English Dictionary defines "relevant" as "closely connected or appropriate to what is being done or considered." So, for each image, you will decide if the advertisement is closley connected or appropriate to the content of the webpage. The task ends with a question asking for your opinion on advertisements in general, followed by several demographic questions. </p>
-    </short-summary>
-  </crowd-instructions>
-
-  <div>
-    <img class="marginauto" width="40%" src="${url_1}" />
+  <div style="width: 90%; margin:auto; display:block;">
+    <hr>
   </div>
 
   <div>
-    <label class="statement"> Please rate how much you agree with the following statement: "The advertisement outlined in blue on the webpage displayed above is relevant to the webpage." </label>
+    <img class="marginauto" width="42%" src="${url_1}" />
+  </div>
+
+  <div>
+    <label class="statement">1. Please rate how much you agree with the following statement: "The ${ad_name_1} advertisement outlined in blue on the ${website_1} webpage displayed above is relevant." </label>
     <ul class='likert'>
       <li>
         <input type="radio" name="q1" value="strong_disagree">
@@ -103,11 +110,11 @@
   </div>
 
   <div>
-    <img class="marginauto" width="40%" src="${url_2}" />
+    <img class="marginauto" width="42%" src="${url_2}" />
   </div>
 
   <div>
-    <label class="statement">Please rate how much you agree with the following statement: "The advertisement outlined in blue on the webpage displayed above is relevant to the webpage."</label>
+    <label class="statement">2. Please rate how much you agree with the following statement: "The ${ad_name_2} advertisement outlined in blue on the ${website_2} webpage displayed above is relevant."</label>
     <ul class='likert'>
       <li>
         <input type="radio" name="q2" value="strong_disagree">
@@ -133,11 +140,11 @@
   </div>
 
   <div>
-    <img class="marginauto" width="40%" src="${url_3}" />
+    <img class="marginauto" width="42%" src="${url_3}" />
   </div>
 
   <div>
-    <label class="statement">Please rate how much you agree with the following statement: "The advertisement outlined in blue on the webpage displayed above is relevant to the webpage."</label>
+    <label class="statement">3. Please rate how much you agree with the following statement: "The ${ad_name_3} advertisement outlined in blue on the ${website_3} webpage displayed above is relevant."</label>
     <ul class='likert'>
       <li>
         <input type="radio" name="q3" value="strong_disagree">
@@ -163,11 +170,11 @@
   </div>
 
   <div>
-    <img class="marginauto" width="40%" src="${url_4}" />
+    <img class="marginauto" width="42%" src="${url_4}" />
   </div>
 
   <div>
-    <label class="statement">Please rate how much you agree with the following statement: "The advertisement outlined in blue on the webpage displayed above is relevant to the webpage."</label>
+    <label class="statement">4. Please rate how much you agree with the following statement: "The ${ad_name_4} advertisement outlined in blue on the ${website_4} webpage displayed above is relevant."</label>
     <ul class='likert'>
       <li>
         <input type="radio" name="q4" value="strong_disagree">
@@ -193,11 +200,11 @@
   </div>
 
   <div>
-    <img class="marginauto" width="40%" src="${url_5}" />
+    <img class="marginauto" width="42%" src="${url_5}" />
   </div>
 
   <div>
-    <label class="statement">Please rate how much you agree with the following statement: "The advertisement outlined in blue on the webpage displayed above is relevant to the webpage."</label>
+    <label class="statement">5. Please rate how much you agree with the following statement: "The ${ad_name_5} advertisement outlined in blue on the ${website_5} webpage displayed above is relevant."</label>
     <ul class='likert'>
       <li>
         <input type="radio" name="q5" value="strong_disagree">
@@ -223,11 +230,11 @@
   </div>
 
   <div>
-    <img class="marginauto" width="40%" src="${url_6}" />
+    <img class="marginauto" width="42%" src="${url_6}" />
   </div>
 
   <div>
-    <label class="statement">Please rate how much you agree with the following statement: "The advertisement outlined in blue on the webpage displayed above is relevant to the webpage."</label>
+    <label class="statement">6. Please rate how much you agree with the following statement: "The ${ad_name_6} advertisement outlined in blue on the ${website_6} webpage displayed above is relevant."</label>
     <ul class='likert'>
       <li>
         <input type="radio" name="q6" value="strong_disagree">
@@ -253,11 +260,11 @@
   </div>
 
   <div>
-    <img class="marginauto" width="40%" src="${url_7}" />
+    <img class="marginauto" width="42%" src="${url_7}" />
   </div>
 
   <div>
-    <label class="statement">Please rate how much you agree with the following statement: "The advertisement outlined in blue on the webpage displayed above is relevant to the webpage."</label>
+    <label class="statement">7. Please rate how much you agree with the following statement: "The ${ad_name_7} advertisement outlined in blue on the ${website_7} webpage displayed above is relevant."</label>
     <ul class='likert'>
       <li>
         <input type="radio" name="q7" value="strong_disagree">
@@ -283,11 +290,11 @@
   </div>
 
   <div>
-    <img class="marginauto" width="40%" src="${url_8}" />
+    <img class="marginauto" width="42%" src="${url_8}" />
   </div>
 
   <div>
-    <label class="statement">Please rate how much you agree with the following statement: "The advertisement outlined in blue on the webpage displayed above is relevant to the webpage."</label>
+    <label class="statement">8. Please rate how much you agree with the following statement: "The ${ad_name_8} advertisement outlined in blue on the ${website_8} webpage displayed above is relevant."</label>
     <ul class='likert'>
       <li>
         <input type="radio" name="q8" value="strong_disagree">
@@ -313,11 +320,11 @@
   </div>
 
   <div>
-    <img class="marginauto" width="40%" src="${url_9}" />
+    <img class="marginauto" width="42%" src="${url_9}" />
   </div>
 
   <div>
-    <label class="statement">Please rate how much you agree with the following statement: "The advertisement outlined in blue on the webpage displayed above is relevant to the webpage."</label>
+    <label class="statement">9. Please rate how much you agree with the following statement: "The ${ad_name_9} advertisement outlined in blue on the ${website_9} webpage displayed above is relevant."</label>
     <ul class='likert'>
       <li>
         <input type="radio" name="q9" value="strong_disagree">
@@ -343,11 +350,11 @@
   </div>
   
   <div>
-    <img class="marginauto" width="40%" src="${url_10}" />
+    <img class="marginauto" width="42%" src="${url_10}" />
   </div>
 
   <div>
-    <label class="statement">Please rate how much you agree with the following statement: "The advertisement outlined in blue on the webpage displayed above is relevant to the webpage."</label>
+    <label class="statement">10. Please rate how much you agree with the following statement: "The ${ad_name_10} advertisement outlined in blue on the ${website_10} webpage displayed above is relevant."</label>
     <ul class='likert'>
       <li>
         <input type="radio" name="q10" value="strong_disagree">
@@ -373,11 +380,11 @@
   </div>
 
   <div>
-    <img class="marginauto" width="40%" src="${url_11}" />
+    <img class="marginauto" width="42%" src="${url_11}" />
   </div>
 
   <div>
-    <label class="statement">Please rate how much you agree with the following statement: "The advertisement outlined in blue on the webpage displayed above is relevant to the webpage."</label>
+    <label class="statement">11. Please rate how much you agree with the following statement: "The ${ad_name_11} advertisement outlined in blue on the ${website_11} webpage displayed above is relevant."</label>
     <ul class='likert'>
       <li>
         <input type="radio" name="q11" value="strong_disagree">
@@ -403,11 +410,11 @@
   </div>
 
   <div>
-    <img class="marginauto" width="40%" src="${url_12}" />
+    <img class="marginauto" width="42%" src="${url_12}" />
   </div>
 
   <div>
-    <label class="statement">Please rate how much you agree with the following statement: "The advertisement outlined in blue on the webpage displayed above is relevant to the webpage."</label>
+    <label class="statement">12. Please rate how much you agree with the following statement: "The ${ad_name_12} advertisement outlined in blue on the ${website_12} webpage displayed above is relevant."</label>
     <ul class='likert'>
       <li>
         <input type="radio" name="q12" value="strong_disagree">
@@ -433,11 +440,11 @@
   </div>
 
 <div>
-    <img class="marginauto" width="40%" src="${url_13}" />
+    <img class="marginauto" width="42%" src="${url_13}" />
   </div>
 
   <div>
-    <label class="statement">Please rate how much you agree with the following statement: "The advertisement outlined in blue on the webpage displayed above is relevant to the webpage."</label>
+    <label class="statement">13. Please rate how much you agree with the following statement: "The ${ad_name_13} advertisement outlined in blue on the ${website_13} webpage displayed above is relevant."</label>
     <ul class='likert'>
       <li>
         <input type="radio" name="q13" value="strong_disagree">
@@ -463,11 +470,11 @@
   </div>
 
 <div>
-    <img class="marginauto" width="40%" src="${url_14}" />
+    <img class="marginauto" width="42%" src="${url_14}" />
   </div>
 
   <div>
-    <label class="statement">Please rate how much you agree with the following statement: "The advertisement outlined in blue on the webpage displayed above is relevant to the webpage."</label>
+    <label class="statement">14. Please rate how much you agree with the following statement: "The ${ad_name_14} advertisement outlined in blue on the ${website_14} webpage displayed above is relevant."</label>
     <ul class='likert'>
       <li>
         <input type="radio" name="q14" value="strong_disagree">
@@ -493,11 +500,11 @@
   </div>
 
 <div>
-    <img class="marginauto" width="40%" src="${url_15}" />
+    <img class="marginauto" width="42%" src="${url_15}" />
   </div>
 
   <div>
-    <label class="statement">Please rate how much you agree with the following statement: "The advertisement outlined in blue on the webpage displayed above is relevant to the webpage."</label>
+    <label class="statement">15. Please rate how much you agree with the following statement: "The ${ad_name_15} advertisement outlined in blue on the ${website_15} webpage displayed above is relevant."</label>
     <ul class='likert'>
       <li>
         <input type="radio" name="q15" value="strong_disagree">
@@ -523,11 +530,11 @@
   </div>
 
 <div>
-    <img class="marginauto" width="40%" src="${url_16}" />
+    <img class="marginauto" width="42%" src="${url_16}" />
   </div>
 
   <div>
-    <label class="statement">Please rate how much you agree with the following statement: "The advertisement outlined in blue on the webpage displayed above is relevant to the webpage."</label>
+    <label class="statement">16. Please rate how much you agree with the following statement: "The ${ad_name_16} advertisement outlined in blue on the ${website_16} webpage displayed above is relevant."</label>
     <ul class='likert'>
       <li>
         <input type="radio" name="q16" value="strong_disagree">
