@@ -1,0 +1,14 @@
+Still need to do:
+
+- implement rejection criteria: 
+        - zip code should be a real zip code
+        - age should be in a reasonable range (greater than min mturk age, less than 100)
+        - survey should take longer than 30 seconds
+        - reject workers who have already done one of these HITs
+
+- extend amount of time turkers can take (10 minutes too short, some grab and hold a lot of HITs at once)
+
+- probably also need to extend the amount of time HITs stay live for (maybe a few hours? not sure)
+
+From professor:
+
