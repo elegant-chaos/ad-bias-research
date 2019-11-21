@@ -3,18 +3,28 @@
 - Instructions on top - include cost ($.15)
 
 - Cut intro down from 4 sentances (paraphrase). People will not read 4 sentances.
+TODO: Jen update instructions 
 
-- Consider using a dropdown for relevancy rankings over likert scale
+- Change likert scale to options 
 
 - Number questions
+TODO: Matt label questions 
 
 - Make scale same for all questions 
 
 - Consider allowing people to complete it multiple times. It's okay if we determine that we could get stronger demographic results with increased budget in the feature.
 
 - Do pilot for 50-100 people first. It's okay if you make changes afterwards. Eliminate these people from the real study (because you have their IDs)
+  (5 hits to be released, can be done by 9 people. Take those ids and don't let them do it again)
+  
+  - Don't reject anyone just let them do it again 
 
 - If demographics are way off, adjust halfway through and relaunch. Ex. if there are not enough women, require last 100 to be women
+
+- Change hit time to 2 hours (turkers can have multiple tasks at once)
+
+
+
 
 
 
