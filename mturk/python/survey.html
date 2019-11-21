@@ -71,6 +71,10 @@
 <!-- You must include crowd-form so that your task submits answers to MTurk -->
 <crowd-form class="marginauto" id="survey" answer-format="flatten-objects">
   <div class="marginauto" style="width: 80%">
+    <p style="color: red; font-size: 24px; font-weight: 500">&#9888; Please do not submit multiple responses. &#9888;</p>
+  </div>
+  
+  <div class="marginauto" style="width: 80%">
     <p>You will be shown screen shots of webpages that include an advertisement placed by a service like Google Ads. The advertisement on the page will be highlighted with a blue box. For each webpage/advertisement combination, you will rate how relevant the advertisement is to the page based on your subjective judgement. The Oxford English Dictionary defines "relevant" as "closely connected or appropriate to what is being done or considered." So, for each image, you will decide if the advertisement is closley connected or appropriate to the content of the webpage. There are a total of 16 images to rate.
     <p>The task ends with a question asking for your opinion on advertisements in general, followed by several demographic questions.</p>
   </div>
@@ -87,23 +91,23 @@
     <label class="statement">1. Please rate how much you agree with the following statement: "The ${ad_name_1} advertisement outlined with a blue box on the ${website_1} webpage displayed above is relevant to the webpage." </label>
     <ul class='likert'>
       <li>
-        <input type="radio" name="q1" value="strong_disagree">
+        <input required type="radio" name="q1" value="strong_disagree">
         <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="q1" value="disagree">
+        <input required type="radio" name="q1" value="disagree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="q1" value="Unsure">
+        <input required type="radio" name="q1" value="Unsure">
         <label>Unsure</label>
       </li>
       <li>
-        <input type="radio" name="q1" value="agree">
+        <input required type="radio" name="q1" value="agree">
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="q1" value="strong_agree">
+        <input required type="radio" name="q1" value="strong_agree">
         <label>Strongly agree</label>
       </li>
     </ul>
@@ -117,23 +121,23 @@
     <label class="statement">2. Please rate how much you agree with the following statement: "The ${ad_name_2} advertisement with a blue box on the ${website_2} webpage displayed above is relevant to the webpage."</label>
     <ul class='likert'>
       <li>
-        <input type="radio" name="q2" value="strong_disagree">
+        <input required type="radio" name="q2" value="strong_disagree">
         <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="q2" value="disagree">
+        <input required type="radio" name="q2" value="disagree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="q2" value="Unsure">
+        <input required type="radio" name="q2" value="Unsure">
         <label>Unsure</label>
       </li>
       <li>
-        <input type="radio" name="q2" value="agree">
+        <input required type="radio" name="q2" value="agree">
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="q2" value="strong_agree">
+        <input required type="radio" name="q2" value="strong_agree">
         <label>Strongly agree</label>
       </li>
     </ul>
@@ -147,23 +151,23 @@
     <label class="statement">3. Please rate how much you agree with the following statement: "The ${ad_name_3} advertisement with a blue box on the ${website_3} webpage displayed above is relevant to the webpage."</label>
     <ul class='likert'>
       <li>
-        <input type="radio" name="q3" value="strong_disagree">
+        <input required type="radio" name="q3" value="strong_disagree">
         <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="q3" value="disagree">
+        <input required type="radio" name="q3" value="disagree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="q3" value="Unsure">
+        <input required type="radio" name="q3" value="Unsure">
         <label>Unsure</label>
       </li>
       <li>
-        <input type="radio" name="q3" value="agree">
+        <input required type="radio" name="q3" value="agree">
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="q3" value="strong_agree">
+        <input required type="radio" name="q3" value="strong_agree">
         <label>Strongly agree</label>
       </li>
     </ul>
@@ -177,23 +181,23 @@
     <label class="statement">4. Please rate how much you agree with the following statement: "The ${ad_name_4} advertisement with a blue box on the ${website_4} webpage displayed above is relevant to the webpage."</label>
     <ul class='likert'>
       <li>
-        <input type="radio" name="q4" value="strong_disagree">
+        <input required type="radio" name="q4" value="strong_disagree">
         <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="q4" value="disagree">
+        <input required type="radio" name="q4" value="disagree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="q4" value="Unsure">
+        <input required type="radio" name="q4" value="Unsure">
         <label>Unsure</label>
       </li>
       <li>
-        <input type="radio" name="q4" value="agree">
+        <input required type="radio" name="q4" value="agree">
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="q4" value="strong_agree">
+        <input required type="radio" name="q4" value="strong_agree">
         <label>Strongly agree</label>
       </li>
     </ul>
@@ -207,23 +211,23 @@
     <label class="statement">5. Please rate how much you agree with the following statement: "The ${ad_name_5} advertisement with a blue box on the ${website_5} webpage displayed above is relevant to the webpage."</label>
     <ul class='likert'>
       <li>
-        <input type="radio" name="q5" value="strong_disagree">
+        <input required type="radio" name="q5" value="strong_disagree">
         <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="q5" value="disagree">
+        <input required type="radio" name="q5" value="disagree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="q5" value="Unsure">
+        <input required type="radio" name="q5" value="Unsure">
         <label>Unsure</label>
       </li>
       <li>
-        <input type="radio" name="q5" value="agree">
+        <input required type="radio" name="q5" value="agree">
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="q5" value="strong_agree">
+        <input required type="radio" name="q5" value="strong_agree">
         <label>Strongly agree</label>
       </li>
     </ul>
@@ -237,23 +241,23 @@
     <label class="statement">6. Please rate how much you agree with the following statement: "The ${ad_name_6} advertisement with a blue box on the ${website_6} webpage displayed above is relevant to the webpage."</label>
     <ul class='likert'>
       <li>
-        <input type="radio" name="q6" value="strong_disagree">
+        <input required type="radio" name="q6" value="strong_disagree">
         <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="q6" value="disagree">
+        <input required type="radio" name="q6" value="disagree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="q6" value="Unsure">
+        <input required type="radio" name="q6" value="Unsure">
         <label>Unsure</label>
       </li>
       <li>
-        <input type="radio" name="q6" value="agree">
+        <input required type="radio" name="q6" value="agree">
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="q6" value="strong_agree">
+        <input required type="radio" name="q6" value="strong_agree">
         <label>Strongly agree</label>
       </li>
     </ul>
@@ -267,23 +271,23 @@
     <label class="statement">7. Please rate how much you agree with the following statement: "The ${ad_name_7} advertisement with a blue box on the ${website_7} webpage displayed above is relevant to the webpage."</label>
     <ul class='likert'>
       <li>
-        <input type="radio" name="q7" value="strong_disagree">
+        <input required type="radio" name="q7" value="strong_disagree">
         <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="q7" value="disagree">
+        <input required type="radio" name="q7" value="disagree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="q7" value="Unsure">
+        <input required type="radio" name="q7" value="Unsure">
         <label>Unsure</label>
       </li>
       <li>
-        <input type="radio" name="q7" value="agree">
+        <input required type="radio" name="q7" value="agree">
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="q7" value="strong_agree">
+        <input required type="radio" name="q7" value="strong_agree">
         <label>Strongly agree</label>
       </li>
     </ul>
@@ -297,23 +301,23 @@
     <label class="statement">8. Please rate how much you agree with the following statement: "The ${ad_name_8} advertisement with a blue box on the ${website_8} webpage displayed above is relevant to the webpage."</label>
     <ul class='likert'>
       <li>
-        <input type="radio" name="q8" value="strong_disagree">
+        <input required type="radio" name="q8" value="strong_disagree">
         <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="q8" value="disagree">
+        <input required type="radio" name="q8" value="disagree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="q8" value="Unsure">
+        <input required type="radio" name="q8" value="Unsure">
         <label>Unsure</label>
       </li>
       <li>
-        <input type="radio" name="q8" value="agree">
+        <input required type="radio" name="q8" value="agree">
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="q8" value="strong_agree">
+        <input required type="radio" name="q8" value="strong_agree">
         <label>Strongly agree</label>
       </li>
     </ul>
@@ -327,23 +331,23 @@
     <label class="statement">9. Please rate how much you agree with the following statement: "The ${ad_name_9} advertisement with a blue box on the ${website_9} webpage displayed above is relevant to the webpage."</label>
     <ul class='likert'>
       <li>
-        <input type="radio" name="q9" value="strong_disagree">
+        <input required type="radio" name="q9" value="strong_disagree">
         <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="q9" value="disagree">
+        <input required type="radio" name="q9" value="disagree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="q9" value="Unsure">
+        <input required type="radio" name="q9" value="Unsure">
         <label>Unsure</label>
       </li>
       <li>
-        <input type="radio" name="q9" value="agree">
+        <input required type="radio" name="q9" value="agree">
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="q9" value="strong_agree">
+        <input required type="radio" name="q9" value="strong_agree">
         <label>Strongly agree</label>
       </li>
     </ul>
@@ -357,23 +361,23 @@
     <label class="statement">10. Please rate how much you agree with the following statement: "The ${ad_name_10} advertisement with a blue box on the ${website_10} webpage displayed above is relevant to the webpage."</label>
     <ul class='likert'>
       <li>
-        <input type="radio" name="q10" value="strong_disagree">
+        <input required type="radio" name="q10" value="strong_disagree">
         <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="q10" value="disagree">
+        <input required type="radio" name="q10" value="disagree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="q10" value="Unsure">
+        <input required type="radio" name="q10" value="Unsure">
         <label>Unsure</label>
       </li>
       <li>
-        <input type="radio" name="q10" value="agree">
+        <input required type="radio" name="q10" value="agree">
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="q10" value="strong_agree">
+        <input required type="radio" name="q10" value="strong_agree">
         <label>Strongly agree</label>
       </li>
     </ul>
@@ -387,23 +391,23 @@
     <label class="statement">11. Please rate how much you agree with the following statement: "The ${ad_name_11} advertisement with a blue box on the ${website_11} webpage displayed above is relevant to the webpage."</label>
     <ul class='likert'>
       <li>
-        <input type="radio" name="q11" value="strong_disagree">
+        <input required type="radio" name="q11" value="strong_disagree">
         <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="q11" value="disagree">
+        <input required type="radio" name="q11" value="disagree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="q11" value="Unsure">
+        <input required type="radio" name="q11" value="Unsure">
         <label>Unsure</label>
       </li>
       <li>
-        <input type="radio" name="q11" value="agree">
+        <input required type="radio" name="q11" value="agree">
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="q11" value="strong_agree">
+        <input required type="radio" name="q11" value="strong_agree">
         <label>Strongly agree</label>
       </li>
     </ul>
@@ -417,23 +421,23 @@
     <label class="statement">12. Please rate how much you agree with the following statement: "The ${ad_name_12} advertisement with a blue box on the ${website_12} webpage displayed above is relevant to the webpage."</label>
     <ul class='likert'>
       <li>
-        <input type="radio" name="q12" value="strong_disagree">
+        <input required type="radio" name="q12" value="strong_disagree">
         <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="q12" value="disagree">
+        <input required type="radio" name="q12" value="disagree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="q12" value="Unsure">
+        <input required type="radio" name="q12" value="Unsure">
         <label>Unsure</label>
       </li>
       <li>
-        <input type="radio" name="q12" value="agree">
+        <input required type="radio" name="q12" value="agree">
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="q12" value="strong_agree">
+        <input required type="radio" name="q12" value="strong_agree">
         <label>Strongly agree</label>
       </li>
     </ul>
@@ -447,23 +451,23 @@
     <label class="statement">13. Please rate how much you agree with the following statement: "The ${ad_name_13} advertisement with a blue box on the ${website_13} webpage displayed above is relevant to the webpage."</label>
     <ul class='likert'>
       <li>
-        <input type="radio" name="q13" value="strong_disagree">
+        <input required type="radio" name="q13" value="strong_disagree">
         <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="q13" value="disagree">
+        <input required type="radio" name="q13" value="disagree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="q13" value="Unsure">
+        <input required type="radio" name="q13" value="Unsure">
         <label>Unsure</label>
       </li>
       <li>
-        <input type="radio" name="q13" value="agree">
+        <input required type="radio" name="q13" value="agree">
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="q13" value="strong_agree">
+        <input required type="radio" name="q13" value="strong_agree">
         <label>Strongly agree</label>
       </li>
     </ul>
@@ -477,23 +481,23 @@
     <label class="statement">14. Please rate how much you agree with the following statement: "The ${ad_name_14} advertisement with a blue box on the ${website_14} webpage displayed above is relevant to the webpage."</label>
     <ul class='likert'>
       <li>
-        <input type="radio" name="q14" value="strong_disagree">
+        <input required type="radio" name="q14" value="strong_disagree">
         <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="q14" value="disagree">
+        <input required type="radio" name="q14" value="disagree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="q14" value="Unsure">
+        <input required type="radio" name="q14" value="Unsure">
         <label>Unsure</label>
       </li>
       <li>
-        <input type="radio" name="q14" value="agree">
+        <input required type="radio" name="q14" value="agree">
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="q14" value="strong_agree">
+        <input required type="radio" name="q14" value="strong_agree">
         <label>Strongly agree</label>
       </li>
     </ul>
@@ -507,23 +511,23 @@
     <label class="statement">15. Please rate how much you agree with the following statement: "The ${ad_name_15} advertisement with a blue box on the ${website_15} webpage displayed above is relevant to the webpage."</label>
     <ul class='likert'>
       <li>
-        <input type="radio" name="q15" value="strong_disagree">
+        <input required type="radio" name="q15" value="strong_disagree">
         <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="q15" value="disagree">
+        <input required type="radio" name="q15" value="disagree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="q15" value="Unsure">
+        <input required type="radio" name="q15" value="Unsure">
         <label>Unsure</label>
       </li>
       <li>
-        <input type="radio" name="q15" value="agree">
+        <input required type="radio" name="q15" value="agree">
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="q15" value="strong_agree">
+        <input required type="radio" name="q15" value="strong_agree">
         <label>Strongly agree</label>
       </li>
     </ul>
@@ -537,23 +541,23 @@
     <label class="statement">16. Please rate how much you agree with the following statement: "The ${ad_name_16} advertisement with a blue box on the ${website_16} webpage displayed above is relevant to the webpage."</label>
     <ul class='likert'>
       <li>
-        <input type="radio" name="q16" value="strong_disagree">
+        <input required type="radio" name="q16" value="strong_disagree">
         <label>Strongly disagree</label>
       </li>
       <li>
-        <input type="radio" name="q16" value="disagree">
+        <input required type="radio" name="q16" value="disagree">
         <label>Disagree</label>
       </li>
       <li>
-        <input type="radio" name="q16" value="Unsure">
+        <input required type="radio" name="q16" value="Unsure">
         <label>Unsure</label>
       </li>
       <li>
-        <input type="radio" name="q16" value="agree">
+        <input required type="radio" name="q16" value="agree">
         <label>Agree</label>
       </li>
       <li>
-        <input type="radio" name="q16" value="strong_agree">
+        <input required type="radio" name="q16" value="strong_agree">
         <label>Strongly agree</label>
       </li>
     </ul>
@@ -564,26 +568,26 @@
     <hr>
   </div>
 
-  <label class="statement"> Please rate how much you agree with the following statement: "I enjoy seeing advertisements on webpages I visit." </label>
+  <label class="statement">17. Please rate how much you agree with the following statement: "I enjoy seeing advertisements on webpages I visit." </label>
   <ul class='likert'>
     <li>
-      <input type="radio" name="d1" value="strong_disagree">
+      <input required type="radio" name="d1" value="strong_disagree">
       <label>Strongly disagree</label>
     </li>
     <li>
-      <input type="radio" name="d1" value="disagree">
+      <input required type="radio" name="d1" value="disagree">
       <label>Disagree</label>
     </li>
     <li>
-      <input type="radio" name="d1" value="Unsure">
+      <input required type="radio" name="d1" value="Unsure">
       <label>Neither Agree Nor Disagree</label>
     </li>
     <li>
-      <input type="radio" name="d1" value="agree">
+      <input required type="radio" name="d1" value="agree">
       <label>Agree</label>
     </li>
     <li>
-      <input type="radio" name="d1" value="strong_agree">
+      <input required type="radio" name="d1" value="strong_agree">
       <label>Strongly agree</label>
     </li>
   </ul>
@@ -598,13 +602,13 @@
   </div>
 
   <div style="width: 200px; margin:auto; display:block;">
-    <p>What is the zip code of your primary residence?</p>
-    <crowd-input max-length="5" allowed-pattern="^[0-9]*$" name="zipCode" placeholder="example: 02459" required>
+    <p>18. What is the zip code of your primary residence?</p>
+    <crowd-input min-length="5" max-length="5" allowed-pattern="^[0-9]*$" name="zipCode" placeholder="example: 02459" required>
     </crowd-input>
   </div>
 
   <div style="width: 200px; margin:auto; display:block;">
-    <p>What is your age? </p>
+    <p>19. What is your age? </p>
     <crowd-input max-length="3" allowed-pattern="^[0-9]*$" name="age" placeholder="example: 32" required>
     </crowd-input>
   </div>
@@ -612,7 +616,7 @@
   <br>
 
   <div>
-    <p>Select your gender from the dropdown menu</p>
+    <p>20. Select your gender from the dropdown menu</p>
     <select name="gender" id="gender-select" required>
       <option value="">--Please choose an option--</option>
       <option value="Female">Female</option>
@@ -623,7 +627,7 @@
   <br>
 
   <div>
-    <p>Select your occupation from the dropdown menu</p>
+    <p>21. Select your occupation from the dropdown menu</p>
     <select name="occupation" id="occupation-select" required>
       <option value="">--Please choose an option--</option>
       <option value="employed_stem">Employed (Science, Engineering, or IT)</option>
@@ -638,7 +642,7 @@
   <br>
 
   <div>
-    <p>Select your highest level of education from the dropdown menu</p>
+    <p>22. Select your highest level of education from the dropdown menu</p>
     <select name="education" id="education-select" required>
       <option value="">--Please choose an option--</option>
       <option value="some_highschool">Some High School</option>
@@ -653,7 +657,7 @@
   <br>
 
   <div>
-    <p>Select your race/ethnicity from the dropdown menu</p>
+    <p>23. Select your race/ethnicity from the dropdown menu</p>
     <select name="race" id="race-select" required>
       <option value="">--Please choose an option--</option>
       <option value="white">White</option>
@@ -667,7 +671,7 @@
   </div>
 
   <div>
-    <p>Are you of hispanic or latino origin?</p>
+    <p>24. Are you of hispanic or latino origin?</p>
     <select name="Hispanic" id="hispanic-select" required>
       <option value="">--Please choose an option--</option>
       <option value="Yes">Yes</option>
