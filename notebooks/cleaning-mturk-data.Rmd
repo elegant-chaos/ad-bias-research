@@ -1,0 +1,59 @@
+---
+title: "cleaning_mturk_data"
+author: "Jenn Halbleib"
+date: "11/25/2019"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+dat <- read_csv("results-1.csv")
+
+# How many workers completed more than one HIT?
+dat %>% group_by(workerId) %>% summarise(n = n()) %>% filter(n > 1)
+
+
+# Summary stats for time
+dat %>% summarise(avg_time_to_complete = mean(duration)/60,
+                  min_time_to_complete = min(duration)/60,
+                  max_time_to_complete = max(duration)/60,
+                  median_time_to_complete = median(duration)/60)
+
+# How many men and women?
+dat %>% group_by(gender) %>% summarise(n = n())
+
+# How many of each political orientation?
+dat %>% group_by(Political) %>% summarise(n = n())
+
+# Ad feelings
+dat %>% group_by(feelAboutAd) %>% summarise(n = n())
+
+# Age distribution
+dat %>% summarise(avg_age = mean(age),
+                  sd_age = sd(age),
+                  min_age = min(age),
+                  max_age = max(age),
+                  median_age = median(age))
+
+# Race distribution
+dat %>% group_by(race) %>% summarise(n = n())
+
+# Hispanic distribution
+dat %>% group_by(Hispanic) %>% summarise(n = n())
+
+# Race, hispanic distribution
+dat %>% group_by(race, Hispanic) %>% summarise(n = n())
+
+# education distribution
+dat %>% group_by(education) %>% summarise(n = n())
+
+# employment distribution
+dat %>% group_by(occupation) %>% summarise(n = n())
+
+# education, employment distribution
+dat %>% group_by(education, occupation) %>% summarise(n = n())
+```
+
