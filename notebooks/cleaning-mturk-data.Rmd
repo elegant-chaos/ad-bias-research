@@ -9,13 +9,72 @@ output: html_document
 library(tidyverse)
 ```
 
+Clean Data
+
 ```{r}
-dat <- read_csv("results-1.csv")
+dat <- read_csv("https://raw.githubusercontent.com/elegant-chaos/google-ad-bias-research/master/mturk/python/combined_csv_zipandcountry.csv")
+
+ad_key_dat <- read_csv("/Users/mm06682/projects/school_projects/fall_2019/software_engineering/google-ad-bias-research/data/processed/adDetail.csv")
 
 # How many workers completed more than one HIT?
-dat %>% group_by(workerId) %>% summarise(n = n()) %>% filter(n > 1)
+duplicate_workers <- dat %>% group_by(workerId) %>% summarise(n = n()) %>% filter(n > 1)
+write_csv(duplicate_workers,'/Users/mm06682/projects/school_projects/fall_2019/software_engineering/google-ad-bias-research/data/processed/duplicate_workers.csv')
 
+# Remove duplicated workers by randomly selecting 1 row for each worker
+dat <- dat %>% group_by(workerId) %>% mutate(n = n()) %>% sample_n(1) %>% ungroup()
 
+# Remove rows without the country criteria set
+dat <- dat %>% filter(CountryCriteria == "Yes")
+
+# Make a long form data set
+get_dat_long_for_one_image <- function(dat, q, image_file) {
+  en_q <- sym(q)
+  en_image_file <- sym(q)
+  
+  to_return <- dat %>% 
+    select(c(2:16, q, image_file, 49:56)) %>% 
+    rename(rating := !!q, 
+           image := !!image_file) 
+  
+  return(to_return)
+}
+
+dat1 <- dat %>% get_dat_long_for_one_image('q1', 'image1')
+dat2 <- dat %>% get_dat_long_for_one_image('q2', 'image2')
+dat3 <- dat %>% get_dat_long_for_one_image('q3', 'image3')
+dat4 <- dat %>% get_dat_long_for_one_image('q4', 'image4')
+dat5 <- dat %>% get_dat_long_for_one_image('q5', 'image5')
+dat6 <- dat %>% get_dat_long_for_one_image('q6', 'image6')
+dat7 <- dat %>% get_dat_long_for_one_image('q7', 'image7')
+dat8 <- dat %>% get_dat_long_for_one_image('q8', 'image8')
+dat9 <- dat %>% get_dat_long_for_one_image('q9', 'image9')
+dat10 <- dat %>% get_dat_long_for_one_image('q10', 'image10')
+dat11 <- dat %>% get_dat_long_for_one_image('q11', 'image11')
+dat12 <- dat %>% get_dat_long_for_one_image('q12', 'image12')
+dat13 <- dat %>% get_dat_long_for_one_image('q13', 'image13')
+dat14 <- dat %>% get_dat_long_for_one_image('q14', 'image14')
+dat15 <- dat %>% get_dat_long_for_one_image('q15', 'image15')
+dat16 <- dat %>% get_dat_long_for_one_image('q16', 'image16')
+
+dat_long <- rbind(dat1, dat2, dat3, dat4, dat5, dat6, dat7, 
+                  dat8, dat9, dat10, dat11, dat12, dat13, dat14, dat15, dat16)
+rm(dat1, dat2, dat3, dat4, dat5, dat6, dat7,
+   dat8, dat9, dat10, dat11, dat12, dat13, dat14, dat15, dat16)
+
+dat_long <- dat_long %>% left_join(ad_key_dat, by = c("image" = "Filename"))
+
+# Make the column names make sense 
+dat_long <- dat_long %>% rename(page_type = `Page Source Type`,
+                                relevant = `Relevant vs. Non Relevant`,
+                                density = `Population Density`,
+                                city_state = `City State`,
+                                zip = `Zip Code`)
+
+write_csv(dat_long, '/Users/mm06682/projects/school_projects/fall_2019/software_engineering/google-ad-bias-research/data/processed/final_long.csv')
+```
+
+Generate Summary Stats
+```{r}
 # Summary stats for time
 dat %>% summarise(avg_time_to_complete = mean(duration)/60,
                   min_time_to_complete = min(duration)/60,
@@ -55,5 +114,53 @@ dat %>% group_by(occupation) %>% summarise(n = n())
 
 # education, employment distribution
 dat %>% group_by(education, occupation) %>% summarise(n = n())
+```
+
+Generate Some Interesting Graphs
+```{r}
+# Histogram grid of rating by page type and gender
+dat_long %>% 
+  ggplot(aes(x = rating)) + 
+  geom_histogram(binwidth = 1, color = "white") +
+  facet_grid(as.factor(gender) ~ as.factor(page_type), scales = "free") #adding scales = "free" here will make "other" more visible)
+
+# Histogram grid of rating by study designed relevancy and gender
+dat_long %>%
+  ggplot(aes(x = rating)) + 
+  geom_histogram(binwidth = 1, color = "white") +
+  facet_grid(as.factor(gender) ~ as.factor(relevant))
+
+# Histogram grid of rating by specific page/ad pairing and gender
+# Hard to see here, but definitely some pages in there with drastic gender differences. 
+dat_long %>%
+  ggplot(aes(x = rating)) + 
+  geom_histogram(binwidth = 1, color = "white") +
+  facet_grid(as.factor(gender) ~ as.factor(image))
+
+# Histogram grid of rating by region
+dat_long %>% 
+  ggplot(aes(x = rating)) +
+  geom_histogram(binwidth = 1, color = "white") +
+  facet_grid(as.factor(Region) ~ as.factor(page_type))
+```
+
+
+Mann-Whitney Tests
+
+So, the sig differences here are all between political and non-political pages. But, no-one seems to care about the difference between liberal and conservative pages. 
+
+```{r}
+# gender and page type to predict ratings
+dat_long %>% group_by(gender, page_type, relevant, rating) %>% summarise(n = n())
+
+# Ignoring "other" groups, all sig p-values, across the board. 
+pairwise.wilcox.test(dat_long$rating, interaction(dat_long$gender, dat_long$page_type), 
+                     p.adjust.method = "bonferroni")
+
+# region and page type to predict ratings 
+# Super interesting result: non-political pages and political pages have sig differences in relevancy ratings but 
+pairwise.wilcox.test(dat_long$rating, interaction(dat_long$Region, dat_long$page_type), 
+                     p.adjust.method = "bonferroni")
+
 ```
 
