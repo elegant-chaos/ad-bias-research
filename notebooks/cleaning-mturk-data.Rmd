@@ -71,6 +71,9 @@ dat_long <- dat_long %>% rename(page_type = `Page Source Type`,
                                 zip = `Zip Code`)
 
 write_csv(dat_long, '/Users/mm06682/projects/school_projects/fall_2019/software_engineering/google-ad-bias-research/data/processed/final_long.csv')
+
+#upload short dat
+dat %>% write_csv("/Users/mm06682/projects/school_projects/fall_2019/software_engineering/google-ad-bias-research/data/processed/short_with_correct_exclusions_for_paige.csv")
 ```
 
 Generate Summary Stats
@@ -114,6 +117,10 @@ dat %>% group_by(occupation) %>% summarise(n = n())
 
 # education, employment distribution
 dat %>% group_by(education, occupation) %>% summarise(n = n())
+
+# political orientation
+dat %>% group_by(Political) %>% summarise(n = n()) %>% write_csv("/Users/mm06682/projects/school_projects/fall_2019/software_engineering/google-ad-bias-research/data/processed/political_orientation_counts.csv")
+
 ```
 
 Generate Some Interesting Graphs
@@ -122,7 +129,20 @@ Generate Some Interesting Graphs
 dat_long %>% 
   ggplot(aes(x = rating)) + 
   geom_histogram(binwidth = 1, color = "white") +
-  facet_grid(as.factor(gender) ~ as.factor(page_type), scales = "free") #adding scales = "free" here will make "other" more visible)
+  facet_grid(as.factor(gender) ~ as.factor(page_type), scales = "free") + #adding scales = "free" here will make "other" more visible) +
+    ggtitle("Relevancy Rating Distribution by Gender and Page Type") +
+  xlab("Relevancy Rating") +
+  ylab("Count")
+
+# Histogram grid of rating by gender
+dat_long %>% 
+  ggplot(aes(x = rating, fill = gender)) +
+    geom_histogram( color="#e9ecef", alpha=0.6, position = 'dodge', binwidth = 1) +
+    scale_fill_manual(values=c("#69b3a2", "#404080", "#7daebd")) +
+    ggtitle("Relevancy Rating Distribution by Gender") +
+    guides(fill=guide_legend(title="Gender")) +
+  xlab("Relevancy Rating") +
+  ylab("Count")
 
 # Histogram grid of rating by study designed relevancy and gender
 dat_long %>%
@@ -141,7 +161,26 @@ dat_long %>%
 dat_long %>% 
   ggplot(aes(x = rating)) +
   geom_histogram(binwidth = 1, color = "white") +
-  facet_grid(as.factor(Region) ~ as.factor(page_type))
+  facet_grid(as.factor(Region) ~ as.factor(page_type)) +
+  ggtitle("Relevancy Rating Distribution by Region and Page Type") +
+  xlab("Relevancy Rating") +
+  ylab("Count")
+
+# Histogram grid of rating by page type and political orientation 
+# Bin democrate and lean-democrat, republican and lean-republican
+dat_long <- dat_long %>% 
+  mutate(political_orientation = as.factor(ifelse(Political == "lean-democrat", "democrat",
+                                        ifelse(Political == "lean-republican", "republican", Political)))) 
+dat_long %>%
+  mutate(political_orientation = fct_reorder(political_orientation, rating, .fun='length', .desc = TRUE )) %>%
+  ggplot(aes(x = rating)) +
+  geom_histogram(binwidth = 1, color = "white") +
+  facet_grid(political_orientation ~ as.factor(page_type), scales = "free") +
+  ggtitle("Relevancy Rating Distribution by Political Orientation and Page Type") +
+  xlab("Relevancy Rating") +
+  ylab("Count") 
+  
+
 ```
 
 
@@ -153,14 +192,45 @@ So, the sig differences here are all between political and non-political pages. 
 # gender and page type to predict ratings
 dat_long %>% group_by(gender, page_type, relevant, rating) %>% summarise(n = n())
 
+# gender to predict ratings
+pairwise.wilcox.test(dat_long$rating, as.factor(dat_long$gender),
+            p.adjust.method = "bonferroni")
+
 # Ignoring "other" groups, all sig p-values, across the board. 
-pairwise.wilcox.test(dat_long$rating, interaction(dat_long$gender, dat_long$page_type), 
+gender_type <- pairwise.wilcox.test(dat_long$rating, interaction(dat_long$gender, dat_long$page_type), 
                      p.adjust.method = "bonferroni")
+
+capture.output(gender_type, file = "gender_type.txt", append = FALSE)
 
 # region and page type to predict ratings 
 # Super interesting result: non-political pages and political pages have sig differences in relevancy ratings but 
-pairwise.wilcox.test(dat_long$rating, interaction(dat_long$Region, dat_long$page_type), 
+region_type <- pairwise.wilcox.test(dat_long$rating, interaction(dat_long$Region, dat_long$page_type), 
                      p.adjust.method = "bonferroni")
+capture.output(region_type, file = "region_type.txt", append =FALSE)
 
+region_only <- pairwise.wilcox.test(dat_long$rating, as.factor(dat_long$Region),
+                                    p.adjust.method = "bonferroni")
+region_only
+
+page_type_only <- pairwise.wilcox.test(dat_long$rating, as.factor(dat_long$page_type),
+                                       p.adjust.method = "bonferroni")
+
+page_type_only
+
+# political orientation and page type to predict ratings
+political_type <- pairwise.wilcox.test(dat_long$rating, 
+                                       interaction(dat_long$Political, dat_long$page_type),
+                                       p.adjust.method = "bonferroni")
+capture.output(political_type, file = "political_type.txt", append = FALSE)
+
+# What's really interesting here is that the sig p-values between dems/republicans occur only for non-political pages
+# So, dems/republicans seem to agree on what belongs on political pages but they differ on what they find
+# relevant to non-political pages. 
+
+# just political orientation
+pairwise.wilcox.test(dat_long$rating, dat_long$political_orientation,
+                     p.adjust.method = "bonferroni")
+pairwise.wilcox.test(dat_long$rating, dat_long$Political,
+                     p.adjust.method = "bonferroni")
 ```
 
