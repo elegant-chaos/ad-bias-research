@@ -11,7 +11,7 @@
     border: 3px solid black;
   }
 
-  .statement {
+  .statement {https://workersandbox.mturk.com/mturk/preview?groupId=3Z18Y091UA8RDCEEAQFHJ1EPO8KF1Y
     display: block;
     font-size: 14px;
     padding: 30px 4.25% 0 4.25%;
@@ -71,11 +71,11 @@
 <!-- You must include crowd-form so that your task submits answers to MTurk -->
 <crowd-form class="marginauto" id="survey" answer-format="flatten-objects">
   <div class="marginauto" style="width: 80%">
-    <p style="color: red; font-size: 24px; font-weight: 500">&#9888; Please do not submit multiple responses. &#9888;</p>
+    <p style="color: red; font-size: 24px; font-weight: 500">&#9888; Please do not accept more than one version of this HIT. &#9888;</p>
   </div>
 
   <div class="marginauto" style="width: 80%">
-    <p>You will be shown screen shots of webpages that include an advertisement placed by a service like Google Ads. The advertisement on the page will be highlighted with a blue box. For each webpage/advertisement combination, you will rate how relevant the advertisement is to the page based on your subjective judgement. The Oxford English Dictionary defines "relevant" as "closely connected or appropriate to what is being done or considered." So, for each image, you will decide if the advertisement is closely connected or appropriate to the content of the webpage. There are a total of 16 images to rate.
+    <p>In this task, you will view screen shots of webpages that include an advertisement placed by a third party service. Each advertisement has a blue box surrounding it. For each webpage/advertisement combination, you will rate how relevant the advertisement is to the webpage based on your subjective judgement. The Oxford English Dictionary defines "relevant" as "closely connected or appropriate to what is being done or considered." So, for each image, you will decide if the advertisement is closely connected or appropriate to the content of the webpage. There are a total of 16 images to rate.
     <p>The task ends with a question asking for your opinion on advertisements in general, followed by several demographic questions.</p>
   </div>
 
@@ -88,27 +88,27 @@
   </div>
 
   <div>
-    <label class="statement">1. The Oxford English Dictionary defines "relevant" as "closely connected or appropriate to what is being done or considered." With this definition in mind, complete the following statement: "The ${ad_name_1} advertisement outlined with a blue box on the ${website_1} webpage displayed above is ________ to the webpage." </label>
+    <label class="statement">1. Complete the following statement, defining "relevant" as "closely connected or appropriate": "The ${ad_name_1} advertisement outlined with a blue box on the webpage displayed above is ________ to the webpage." </label>
     <ul class='likert'>
       <li>
         <input required type="radio" name="q1" value="1">
-        <label>Completely Irrelevant</label>
+        <label>irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q1" value="2">
-        <label>Somewhat Irrelevant</label>
+        <label>somewhat irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q1" value="3">
-        <label>Unsure</label>
+        <label>neither relevant nor irrelevant </label>
       </li>
       <li>
         <input required type="radio" name="q1" value="4">
-        <label>Somewhat Relevant</label>
+        <label>somewhat relevant</label>
       </li>
       <li>
         <input required type="radio" name="q1" value="5">
-        <label>Completely Relevant</label>
+        <label>relevant</label>
       </li>
     </ul>
   </div>
@@ -118,27 +118,27 @@
   </div>
 
   <div>
-    <label class="statement">2. Complete the following statement: "The ${ad_name_2} advertisement with a blue box on the ${website_2} webpage displayed above is ________ to the webpage."</label>
+    <label class="statement">2. Complete the following statement: "The ${ad_name_2} advertisement outlined with a blue box on the webpage displayed above is ________ to the webpage."</label>
     <ul class='likert'>
       <li>
         <input required type="radio" name="q2" value="1">
-        <label>Completely Irrelevant</label>
+        <label>irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q2" value="2">
-        <label>Somewhat Irrelevant</label>
+        <label>somewhat irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q2" value="3">
-        <label>Unsure</label>
+        <label>neither relevant nor irrelevant </label>
       </li>
       <li>
         <input required type="radio" name="q2" value="4">
-        <label>Somewhat Relevant</label>
+        <label>somewhat relevant</label>
       </li>
       <li>
         <input required type="radio" name="q2" value="5">
-        <label>Completely Relevant</label>
+        <label>relevant</label>
       </li>
     </ul>
   </div>
@@ -148,27 +148,27 @@
   </div>
 
   <div>
-    <label class="statement">3. Complete the following statement: "The ${ad_name_3} advertisement with a blue box on the ${website_3} webpage displayed above is ________ to the webpage."</label>
+    <label class="statement">3. Complete the following statement: "The ${ad_name_3} advertisement outlined with a blue box on the webpage displayed above is ________ to the webpage."</label>
     <ul class='likert'>
       <li>
         <input required type="radio" name="q3" value="1">
-        <label>Completely Irrelevant</label>
+        <label>irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q3" value="2">
-        <label>Somewhat Irrelevant</label>
+        <label>somewhat irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q3" value="3">
-        <label>Unsure</label>
+        <label>neither relevant nor irrelevant </label>
       </li>
       <li>
         <input required type="radio" name="q3" value="4">
-        <label>Somewhat Relevant</label>
+        <label>somewhat relevant</label>
       </li>
       <li>
         <input required type="radio" name="q3" value="5">
-        <label>Completely Relevant</label>
+        <label>relevant</label>
       </li>
     </ul>
   </div>
@@ -178,27 +178,27 @@
   </div>
 
   <div>
-    <label class="statement">4. Complete the following statement: "The ${ad_name_4} advertisement with a blue box on the ${website_4} webpage displayed above is ________ to the webpage."</label>
+    <label class="statement">4. Complete the following statement: "The ${ad_name_4} advertisement outlined with a blue box on the webpage displayed above is ________ to the webpage."</label>
     <ul class='likert'>
       <li>
         <input required type="radio" name="q4" value="1">
-        <label>Completely Irrelevant</label>
+        <label>irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q4" value="2">
-        <label>Somewhat Irrelevant</label>
+        <label>somewhat irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q4" value="3">
-        <label>Unsure</label>
+        <label>neither relevant nor irrelevant </label>
       </li>
       <li>
         <input required type="radio" name="q4" value="4">
-        <label>Somewhat Relevant</label>
+        <label>somewhat relevant</label>
       </li>
       <li>
         <input required type="radio" name="q4" value="5">
-        <label>Completely Relevant</label>
+        <label>relevant</label>
       </li>
     </ul>
   </div>
@@ -212,23 +212,23 @@
     <ul class='likert'>
       <li>
         <input required type="radio" name="q5" value="1">
-        <label>Completely Irrelevant</label>
+        <label>irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q5" value="2">
-        <label>Somewhat Irrelevant</label>
+        <label>somewhat irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q5" value="3">
-        <label>Unsure</label>
+        <label>neither relevant nor irrelevant </label>
       </li>
       <li>
         <input required type="radio" name="q5" value="4">
-        <label>Somewhat Relevant</label>
+        <label>somewhat relevant</label>
       </li>
       <li>
         <input required type="radio" name="q5" value="5">
-        <label>Completely Relevant</label>
+        <label>relevant</label>
       </li>
     </ul>
   </div>
@@ -238,27 +238,27 @@
   </div>
 
   <div>
-    <label class="statement">6. Complete the following statement: "The ${ad_name_6} advertisement with a blue box on the ${website_6} webpage displayed above is ________ to the webpage."</label>
+    <label class="statement">6. Complete the following statement: "The ${ad_name_6} advertisement outlined with a blue box on the webpage displayed above is ________ to the webpage."</label>
     <ul class='likert'>
       <li>
         <input required type="radio" name="q6" value="1">
-        <label>Completely Irrelevant</label>
+        <label>irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q6" value="2">
-        <label>Somewhat Irrelevant</label>
+        <label>somewhat irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q6" value="3">
-        <label>Unsure</label>
+        <label>neither relevant nor irrelevant </label>
       </li>
       <li>
         <input required type="radio" name="q6" value="4">
-        <label>Somewhat Relevant</label>
+        <label>somewhat relevant</label>
       </li>
       <li>
         <input required type="radio" name="q6" value="5">
-        <label>Completely Relevant</label>
+        <label>relevant</label>
       </li>
     </ul>
   </div>
@@ -268,27 +268,27 @@
   </div>
 
   <div>
-    <label class="statement">7. Complete the following statement: "The ${ad_name_7} advertisement with a blue box on the ${website_7} webpage displayed above is ________ to the webpage."</label>
+    <label class="statement">7. Complete the following statement: "The ${ad_name_7} advertisement outlined with a blue box on the webpage displayed above is ________ to the webpage."</label>
     <ul class='likert'>
       <li>
         <input required type="radio" name="q7" value="1">
-        <label>Completely Irrelevant</label>
+        <label>irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q7" value="2">
-        <label>Somewhat Irrelevant</label>
+        <label>somewhat irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q7" value="3">
-        <label>Unsure</label>
+        <label>neither relevant nor irrelevant </label>
       </li>
       <li>
         <input required type="radio" name="q7" value="4">
-        <label>Somewhat Relevant</label>
+        <label>somewhat relevant</label>
       </li>
       <li>
         <input required type="radio" name="q7" value="5">
-        <label>Completely Relevant</label>
+        <label>relevant</label>
       </li>
     </ul>
   </div>
@@ -298,27 +298,27 @@
   </div>
 
   <div>
-    <label class="statement">8. Complete the following statement: "The ${ad_name_8} advertisement with a blue box on the ${website_8} webpage displayed above is ________ to the webpage."</label>
+    <label class="statement">8. Complete the following statement: "The ${ad_name_8} advertisement outlined with a blue box on the webpage displayed above is ________ to the webpage."</label>
     <ul class='likert'>
       <li>
         <input required type="radio" name="q8" value="1">
-        <label>Completely Irrelevant</label>
+        <label>irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q8" value="2">
-        <label>Somewhat Irrelevant</label>
+        <label>somewhat irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q8" value="3">
-        <label>Unsure</label>
+        <label>neither relevant nor irrelevant </label>
       </li>
       <li>
         <input required type="radio" name="q8" value="4">
-        <label>Somewhat Relevant</label>
+        <label>somewhat relevant</label>
       </li>
       <li>
         <input required type="radio" name="q8" value="5">
-        <label>Completely Relevant</label>
+        <label>relevant</label>
       </li>
     </ul>
   </div>
@@ -328,27 +328,27 @@
   </div>
 
   <div>
-    <label class="statement">9. Complete the following statement: "The ${ad_name_9} advertisement with a blue box on the ${website_9} webpage displayed above is ________ to the webpage."</label>
+    <label class="statement">9. Complete the following statement: "The ${ad_name_9} advertisement outlined with a blue box on the webpage displayed above is ________ to the webpage."</label>
     <ul class='likert'>
       <li>
         <input required type="radio" name="q9" value="1">
-        <label>Completely Irrelevant</label>
+        <label>irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q9" value="2">
-        <label>Somewhat Irrelevant</label>
+        <label>somewhat irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q9" value="3">
-        <label>Unsure</label>
+        <label>neither relevant nor irrelevant </label>
       </li>
       <li>
         <input required type="radio" name="q9" value="4">
-        <label>Somewhat Relevant</label>
+        <label>somewhat relevant</label>
       </li>
       <li>
         <input required type="radio" name="q9" value="5">
-        <label>Completely Relevant</label>
+        <label>relevant</label>
       </li>
     </ul>
   </div>
@@ -358,27 +358,27 @@
   </div>
 
   <div>
-    <label class="statement">10. Complete the following statement: "The ${ad_name_10} advertisement with a blue box on the ${website_10} webpage displayed above is ________ to the webpage."</label>
+    <label class="statement">10. Complete the following statement: "The ${ad_name_10} advertisement outlined with a blue box on the webpage displayed above is ________ to the webpage."</label>
     <ul class='likert'>
       <li>
         <input required type="radio" name="q10" value="1">
-        <label>Completely Irrelevant</label>
+        <label>irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q10" value="2">
-        <label>Somewhat Irrelevant</label>
+        <label>somewhat irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q10" value="3">
-        <label>Unsure</label>
+        <label>neither relevant nor irrelevant </label>
       </li>
       <li>
         <input required type="radio" name="q10" value="4">
-        <label>Somewhat Relevant</label>
+        <label>somewhat relevant</label>
       </li>
       <li>
         <input required type="radio" name="q10" value="5">
-        <label>Completely Relevant</label>
+        <label>relevant</label>
       </li>
     </ul>
   </div>
@@ -388,27 +388,27 @@
   </div>
 
   <div>
-    <label class="statement">11. Complete the following statement: "The ${ad_name_11} advertisement with a blue box on the ${website_11} webpage displayed above is ________ to the webpage."</label>
+    <label class="statement">11. Complete the following statement: "The ${ad_name_11} advertisement outlined with a blue box on the webpage displayed above is ________ to the webpage."</label>
     <ul class='likert'>
       <li>
         <input required type="radio" name="q11" value="1">
-        <label>Completely Irrelevant</label>
+        <label>irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q11" value="2">
-        <label>Somewhat Irrelevant</label>
+        <label>somewhat irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q11" value="3">
-        <label>Unsure</label>
+        <label>neither relevant nor irrelevant </label>
       </li>
       <li>
         <input required type="radio" name="q11" value="4">
-        <label>Somewhat Relevant</label>
+        <label>somewhat relevant</label>
       </li>
       <li>
         <input required type="radio" name="q11" value="5">
-        <label>Completely Relevant</label>
+        <label>relevant</label>
       </li>
     </ul>
   </div>
@@ -418,27 +418,27 @@
   </div>
 
   <div>
-    <label class="statement">12. Complete the following statement: "The ${ad_name_12} advertisement with a blue box on the ${website_12} webpage displayed above is ________ to the webpage."</label>
+    <label class="statement">12. Complete the following statement: "The ${ad_name_12} advertisement outlined with a blue box on the webpage displayed above is ________ to the webpage."</label>
     <ul class='likert'>
       <li>
         <input required type="radio" name="q12" value="1">
-        <label>Completely Irrelevant</label>
+        <label>irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q12" value="2">
-        <label>Somewhat Irrelevant</label>
+        <label>somewhat irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q12" value="3">
-        <label>Unsure</label>
+        <label>neither relevant nor irrelevant </label>
       </li>
       <li>
         <input required type="radio" name="q12" value="4">
-        <label>Somewhat Relevant</label>
+        <label>somewhat relevant</label>
       </li>
       <li>
         <input required type="radio" name="q12" value="5">
-        <label>Completely Relevant</label>
+        <label>relevant</label>
       </li>
     </ul>
   </div>
@@ -448,27 +448,27 @@
   </div>
 
   <div>
-    <label class="statement">13. Complete the following statement: "The ${ad_name_13} advertisement with a blue box on the ${website_13} webpage displayed above is ________ to the webpage."</label>
+    <label class="statement">13. Complete the following statement: "The ${ad_name_13} advertisement outlined with a blue box on the webpage displayed above is ________ to the webpage."</label>
     <ul class='likert'>
       <li>
         <input required type="radio" name="q13" value="1">
-        <label>Completely Irrelevant</label>
+        <label>irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q13" value="2">
-        <label>Somewhat Irrelevant</label>
+        <label>somewhat irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q13" value="3">
-        <label>Unsure</label>
+        <label>neither relevant nor irrelevant </label>
       </li>
       <li>
         <input required type="radio" name="q13" value="4">
-        <label>Somewhat Relevant</label>
+        <label>somewhat relevant</label>
       </li>
       <li>
         <input required type="radio" name="q13" value="5">
-        <label>Completely Relevant</label>
+        <label>relevant</label>
       </li>
     </ul>
   </div>
@@ -478,27 +478,27 @@
   </div>
 
   <div>
-    <label class="statement">14. Complete the following statement: "The ${ad_name_14} advertisement with a blue box on the ${website_14} webpage displayed above is ________ to the webpage."</label>
+    <label class="statement">14. Complete the following statement: "The ${ad_name_14} advertisement outlined with a blue box on the webpage displayed above is ________ to the webpage."</label>
     <ul class='likert'>
       <li>
         <input required type="radio" name="q14" value="1">
-        <label>Completely Irrelevant</label>
+        <label>irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q14" value="2">
-        <label>Somewhat Irrelevant</label>
+        <label>somewhat irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q14" value="3">
-        <label>Unsure</label>
+        <label>neither relevant nor irrelevant </label>
       </li>
       <li>
         <input required type="radio" name="q14" value="4">
-        <label>Somewhat Relevant</label>
+        <label>somewhat relevant</label>
       </li>
       <li>
         <input required type="radio" name="q14" value="5">
-        <label>Completely Relevant</label>
+        <label>relevant</label>
       </li>
     </ul>
   </div>
@@ -508,27 +508,27 @@
   </div>
 
   <div>
-    <label class="statement">15. Complete the following statement: "The ${ad_name_15} advertisement with a blue box on the ${website_15} webpage displayed above is ________ to the webpage."</label>
+    <label class="statement">15. Complete the following statement: "The ${ad_name_15} advertisement outlined with a blue box on the webpage displayed above is ________ to the webpage."</label>
     <ul class='likert'>
       <li>
         <input required type="radio" name="q15" value="1">
-        <label>Completely Irrelevant</label>
+        <label>irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q15" value="2">
-        <label>Somewhat Irrelevant</label>
+        <label>somewhat irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q15" value="3">
-        <label>Unsure</label>
+        <label>neither relevant nor irrelevant </label>
       </li>
       <li>
         <input required type="radio" name="q15" value="4">
-        <label>Somewhat Relevant</label>
+        <label>somewhat relevant</label>
       </li>
       <li>
         <input required type="radio" name="q15" value="5">
-        <label>Completely Relevant</label>
+        <label>relevant</label>
       </li>
     </ul>
   </div>
@@ -538,27 +538,27 @@
   </div>
 
   <div>
-    <label class="statement">16. Complete the following statement: "The ${ad_name_16} advertisement with a blue box on the ${website_16} webpage displayed above is ________ to the webpage."</label>
+    <label class="statement">16. Complete the following statement: "The ${ad_name_16} advertisement outlined with a blue box on the webpage displayed above is ________ to the webpage."</label>
     <ul class='likert'>
       <li>
         <input required type="radio" name="q16" value="1">
-        <label>Completely Irrelevant</label>
+        <label>irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q16" value="2">
-        <label>Somewhat Irrelevant</label>
+        <label>somewhat irrelevant</label>
       </li>
       <li>
         <input required type="radio" name="q16" value="3">
-        <label>Unsure</label>
+        <label>neither relevant nor irrelevant </label>
       </li>
       <li>
         <input required type="radio" name="q16" value="4">
-        <label>Somewhat Relevant</label>
+        <label>somewhat relevant</label>
       </li>
       <li>
         <input required type="radio" name="q16" value="5">
-        <label>Completely Relevant</label>
+        <label>relevant</label>
       </li>
     </ul>
   </div>
@@ -568,27 +568,27 @@
     <hr>
   </div>
 
-  <label class="statement">17. Please rate how much you agree with the following statement: "I enjoy seeing advertisements on webpages I visit." </label>
+  <label class="statement">17. Rate how much you agree with the following statement: "I enjoy seeing advertisements on webpages I visit." </label>
   <ul class='likert'>
     <li>
       <input required type="radio" name="d1" value="strong_disagree">
-      <label>Strongly disagree</label>
+      <label>disagree</label>
     </li>
     <li>
       <input required type="radio" name="d1" value="disagree">
-      <label>Disagree</label>
+      <label>somewhat disagree</label>
     </li>
     <li>
-      <input required type="radio" name="d1" value="Unsure">
-      <label>Neither Agree Nor Disagree</label>
+      <input required type="radio" name="d1" value="neither">
+      <label>neither agree nor disagree</label>
     </li>
     <li>
       <input required type="radio" name="d1" value="agree">
-      <label>Agree</label>
+      <label>somewhat agree</label>
     </li>
     <li>
       <input required type="radio" name="d1" value="strong_agree">
-      <label>Strongly agree</label>
+      <label>agree</label>
     </li>
   </ul>
   </div>
@@ -598,7 +598,7 @@
   </div>
 
   <div>
-    <p>Please answer the following demographic questions.</p>
+    <p> Demographic questions:</p>
   </div>
 
   <div style="width: 200px; margin:auto; display:block;">
@@ -616,22 +616,23 @@
   <br>
 
   <div>
-    <p>20. Select your gender from the dropdown menu</p>
+    <p>20. Select the gender you most identify with from the dropdown menu.</p>
     <select name="gender" id="gender-select" required>
-      <option value="">--Please choose an option--</option>
-      <option value="Female">Female</option>
-      <option value="Male">Male</option>
-      <option value="Other">Other</option>
+      <option value="">--Choose an option--</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+      <option value="decline">Decline to answer</option>
     </select>
   </div>
   <br>
 
   <div>
-    <p>21. Select your occupation from the dropdown menu</p>
+    <p>21. Select your occupation from the dropdown menu.</p>
     <select name="occupation" id="occupation-select" required>
-      <option value="">--Please choose an option--</option>
+      <option value="">--Choose an option--</option>
       <option value="employed_stem">Employed (Science, Engineering, or IT)</option>
-      <option value="employed_biz">Employed (Business, Management, or Finances)</option>
+      <option value="employed_biz">Employed (Business, Management, or Finance)</option>
       <option value="employed_teacher">Employed (Teacher)</option>
       <option value="employed_other">Employed (Other fields)</option>
       <option value="student">Student</option>
@@ -642,9 +643,9 @@
   <br>
 
   <div>
-    <p>22. Select your highest level of education from the dropdown menu</p>
+    <p>22. Select the highest level of education you've completed from the dropdown menu.</p>
     <select name="education" id="education-select" required>
-      <option value="">--Please choose an option--</option>
+      <option value="">--Choose an option--</option>
       <option value="some_highschool">Some High School</option>
       <option value="highschool">High School</option>
       <option value="some_college">Some College</option>
@@ -657,39 +658,40 @@
   <br>
 
   <div>
-    <p>23. Select your race/ethnicity from the dropdown menu</p>
+    <p>23. Select your race/ethnicity from the dropdown menu.</p>
     <select name="race" id="race-select" required>
-      <option value="">--Please choose an option--</option>
+      <option value="">--Choose an option--</option>
       <option value="white">White</option>
       <option value="african-american">Black or African American</option>
       <option value="asian">Asian</option>
-      <option value="hawaiian">Native Hawaiian or Other Pacific Islander</option>
       <option value="native">American Indian or Alaska Native</option>
+      <option value="hawaiian">Native Hawaiian or Other Pacific Islander</option>
       <option value="other">Other</option>
       <option value="decline">Decline to answer</option>
     </select>
   </div>
 
   <div>
-    <p>24. Are you of hispanic or latino origin?</p>
+    <p>24. Use the dropdown menu to indicate if you are of Hispanic or Latino origin. </p>
     <select name="Hispanic" id="hispanic-select" required>
-      <option value="">--Please choose an option--</option>
-      <option value="Yes">Yes</option>
-      <option value="No">No</option>
+      <option value="">--Choose an option--</option>
+      <option value="hispanic">Yes, I am of Hispanic or Latino origin.</option>
+      <option value="not_hispanic">No, I am not of Hispanic or Latino origin.</option>
+      <option value="decline">Decline to answer</option>
     </select>
   </div>
 
     <div>
     <p>25. Which political party, if any, do you most identify with? </p>
     <select name="Political" id="political-select" required>
-      <option value="">--Please choose an option--</option>
+      <option value="">--Choose an option--</option>
       <option value="democrat">Democrat</option>
       <option value="lean-democrat">Independent - Lean Democrat</option>
-      <option value="independent">Independent - No Lean</option>
+      <option value="independent">Independent - No Preference</option>
       <option value="lean-republican">Independent - Lean Republican</option>
       <option value="republican">Republican</option>
       <option value="other-party">Other Party</option>
-      <option value="unsure">Don't Know</option>
+      <option value="decline">Decline to answer</option>
     </select>
   </div>
 
